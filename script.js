@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const chatBox = document.getElementById('chat-box');
-    const messageInput = document.getElementById('message-input');
-    const sendButton = document.getElementById('send-button');
+    const yourChatBox = document.getElementById('your-chat-box');
+    const yourMessageInput = document.getElementById('your-message-input');
+    const yourSendButton = document.getElementById('your-send-button');
 
-    sendButton.addEventListener('click', () => {
-        const message = messageInput.value.trim();
+    yourSendButton.addEventListener('click', () => {
+        const message = yourMessageInput.value.trim();
         if (message !== '') {
             const messageElement = document.createElement('div');
             messageElement.textContent = message;
-            chatBox.appendChild(messageElement);
-            messageInput.value = '';
-            chatBox.scrollTop = chatBox.scrollHeight;
+            yourChatBox.appendChild(messageElement);
+            yourMessageInput.value = '';
+            yourChatBox.scrollTop = yourChatBox.scrollHeight;
         }
     });
 
-    messageInput.addEventListener('keydown', (event) => {
+    yourMessageInput.addEventListener('keydown', (event) => {
         if (event.key === 'Enter') {
-            sendButton.click();
+            yourSendButton.click();
             event.preventDefault();
         }
     });
