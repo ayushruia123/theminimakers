@@ -177,23 +177,3 @@ button:hover {
 button {
     cursor: pointer;
 }
-<button type="submit" onclick="this.classList.add('loading')">Search</button>
-
-<style>
-button.loading::after {
-    content: '';
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: 2px solid transparent;
-    border-top-color: green;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-</style>
