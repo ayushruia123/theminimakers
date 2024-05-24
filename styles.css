@@ -1,76 +1,199 @@
-/* Add styles for the search box */
-.search-box {
-    text-align: center;
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.search-box input[type="text"] {
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-box button {
-    padding: 10px 20px;
+header {
     background-color: #4CAF50;
     color: white;
+    padding: 1em;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.search-form {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-form button {
+    padding: 8px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
 
-.search-box button:hover {
-    background-color: #45a049;
+.search-form button:hover {
+    background-color: #388E3C;
 }
 
-/* Add styles for rotated images */
-.rotated-images {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.search-form input[type="text"]::placeholder {
+    color: #888;
 }
 
-.rotated-images img {
-    margin: 0 10px;
-    transform: rotate(15deg);
-    border-radius: 10px;
+.search-form input[type="text"]:focus {
+    outline: none;
 }
-/* Add styles for the search box */
-.search-box {
-    text-align: center;
-    margin-bottom: 20px;
+.search-container {
+    position: relative;
+    display: inline-block;
 }
 
-.search-box input[type="text"] {
+.search-input {
     padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    outline: none;
     width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    transition: width 0.4s ease-in-out;
 }
 
-.search-box button {
-    padding: 10px 20px;
+.search-input:focus {
+    width: 300px;
+}
+
+.search-button {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    padding: 10px 15px;
+    margin-left: -42px;
 }
 
-.search-box button:hover {
+.search-button:hover {
     background-color: #45a049;
 }
 
-/* Add styles for rotated images */
-.rotated-images {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.fa-search {
+    font-size: 18px;
+}
+.search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 3px solid green;
+            border-left: none;
+            border-radius: 5 4px 6px 5;
+            background-color: white;
+            color: darkgreen;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: ;
+        }
+button {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+button[type="submit"] {
+    border-left: 2px solid green; 
+}
+button {
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.rotated-images img {
-    margin: 0 10px;
-    transform: rotate(15deg);
-    border-radius: 10px;
+button:hover {
+    background-color: green;
+    color: white;
 }
+button:hover {
+    transform: scale(1.05);
+}
+button {
+    cursor: pointer;
+}
+<button type="submit" onclick="this.classList.add('loading')">Search</button>
+
+<style>
+button.loading::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid transparent;
+    border-top-color: green;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
