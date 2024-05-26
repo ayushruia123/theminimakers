@@ -92,7 +92,8 @@ footer {
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
     outline: none;
-    width: 400px; /* Increased width */
+    width: 100%; /* Full width for responsive design */
+    max-width: 400px; /* Maximum width */
 }
 
 .form-container button {
@@ -104,6 +105,7 @@ footer {
     background-color: white;
     color: darkgreen;
     cursor: pointer;
+    width: auto; /* Auto width for responsive design */
 }
 
 .form-container button:hover {
@@ -127,11 +129,11 @@ footer {
     }
     
     .form-container input[type="text"] {
-        width: 100%;
+        width: 100%; /* Full width for smaller screens */
     }
     
     .form-container button {
-        width: 100%;
+        width: 100%; /* Full width for smaller screens */
         border-radius: 0 0 4px 4px;
         border-left: 1px solid green;
         border-top: none;
