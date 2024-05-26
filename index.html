@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>MiniMakers</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -10,7 +10,7 @@
         <div class="logo">
             <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo">
         </div>
-        <h1>MiniMakers</h1>       
+        <h1 class="header-text">MiniMakers</h1>       
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -28,11 +28,11 @@
     <main>
         <section id="welcome">
             <h2>Welcome to MiniMakers!</h2>
-            <p> Join us on our creative journey with tutorials, games, and bird watching adventures!</p>
+            <p>Join us on our creative journey with tutorials, games, and bird watching adventures!</p>
         </section>
         <div class="form-container">
             <form action="/search" method="GET">
-                <input type="text" name="query" placeholder="Search...">
+                <input type="text" name="query" placeholder="Search..." class="search-box">
                 <button type="submit">Search</button>
             </form>
         </div>
