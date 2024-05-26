@@ -13,6 +13,11 @@ header {
     padding: 1em;
     position: relative;
     text-align: center;
+    height: 50vh; /* Header takes half of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -22,7 +27,11 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 100px; /* Increased size for visibility */
+}
+
+h1 {
+    font-size: 6em; /* Significantly increased font size */
 }
 
 nav ul {
@@ -42,21 +51,34 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 2em; /* Significantly increased font size */
 }
 
 main {
     padding: 1em;
 }
 
-section {
+section#welcome {
+    text-align: center;
     margin-bottom: 2em;
 }
 
+section#welcome h2 {
+    font-size: 5em; /* Significantly increased font size */
+}
+
+section#welcome p {
+    font-size: 2.5em; /* Significantly increased font size */
+}
+
 footer {
-    background-color: black;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .form-container {
@@ -65,17 +87,17 @@ footer {
 }
 
 .form-container input[type="text"] {
-    padding: 5px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
+    padding: 20px; /* Increased padding */
+    font-size: 24px; /* Increased font size */
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
     outline: none;
-    width: 150px; /* Reduced width */
+    width: 400px; /* Increased width */
 }
 
 .form-container button {
-    padding: 5px 15px; /* Reduced padding */
-    font-size: 14px; /* Reduced font size */
+    padding: 20px 30px; /* Increased padding */
+    font-size: 24px; /* Increased font size */
     border: 1px solid green;
     border-left: none;
     border-radius: 0 4px 4px 0;
@@ -109,7 +131,7 @@ footer {
     }
     
     .form-container button {
-        width: 30%;
+        width: 100%;
         border-radius: 0 0 4px 4px;
         border-left: 1px solid green;
         border-top: none;
