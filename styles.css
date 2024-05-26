@@ -1,16 +1,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    color: #333;
+    color: black;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: green;
     color: white;
     padding: 1em;
     position: relative;
+    text-align: center;
 }
 
 .logo {
@@ -23,20 +25,17 @@ header {
     height: 50px;
 }
 
-h1 {
-    text-align: center;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 nav ul li a {
@@ -54,126 +53,65 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-.search-form {
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }
 
-.search-form input[type="text"] {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    width: 200px;
+.form-container {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.search-form button {
-    padding: 8px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
+.form-container input[type="text"] {
+    padding: 5px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 150px; /* Reduced width */
+}
+
+.form-container button {
+    padding: 5px 15px; /* Reduced padding */
+    font-size: 14px; /* Reduced font size */
+    border: 1px solid green;
+    border-left: none;
     border-radius: 0 4px 4px 0;
+    background-color: white;
+    color: darkgreen;
     cursor: pointer;
 }
 
-.search-form button:hover {
-    background-color: #388E3C;
-}
-
-.search-form input[type="text"]::placeholder {
-    color: #888;
-}
-
-.search-form input[type="text"]:focus {
-    outline: none;
-}
-.search-container {
-    position: relative;
-    display: inline-block;
-}
-
-.search-input {
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    outline: none;
-    width: 200px;
-    transition: width 0.4s ease-in-out;
-}
-
-.search-input:focus {
-    width: 300px;
-}
-
-.search-button {
-    background-color: #4CAF50;
+.form-container button:hover {
+    background-color: green;
     color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 10px 15px;
-    margin-left: -42px;
-}
-
-.search-button:hover {
-    background-color: #45a049;
-}
-
-.fa-search {
-    font-size: 18px;
-}
-.search-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px 0 0 4px;
-            outline: none;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: 3px solid green;
-            border-left: none;
-            border-radius: 5 4px 6px 5;
-            background-color: white;
-            color: darkgreen;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: ;
-        }
-button {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-button[type="submit"] {
-    border-left: 2px solid green; 
-}
-button {
+    transform: scale(1.05);
     transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover {
-    background-color: green;
-    color: white;
-}
-button:hover {
-    transform: scale(1.05);
-}
-button {
-    cursor: pointer;
+/* Responsive styles */
+@media (max-width: 800px) {
+    .logo {
+        position: static;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-container input[type="text"] {
+        width: 100%;
+    }
+    
+    .form-container button {
+        width: 30%;
+        border-radius: 0 0 4px 4px;
+        border-left: 1px solid green;
+        border-top: none;
+    }
 }
