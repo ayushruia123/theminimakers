@@ -10,28 +10,24 @@ body {
 header {
     background-color: green;
     color: white;
-    padding: 1em;
+    padding: 2em; /* Increased padding */
     position: relative;
     text-align: center;
-    height: 50vh; /* Header takes half of the viewport height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 50vh; /* 50% of viewport height */
 }
 
 .logo {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 10px;
 }
 
 .logo img {
-    height: 100px; /* Increased size for visibility */
+    height: 40px;
 }
 
-h1 {
-    font-size: 6em; /* Significantly increased font size */
+h1.header-text {
+    font-size: 4em; /* Increased font size */
 }
 
 nav ul {
@@ -39,46 +35,37 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Align items horizontally */
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 10px 0; /* Adjusted margin */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2em; /* Significantly increased font size */
+    font-size: 2em; /* Adjusted font size */
 }
 
 main {
     padding: 1em;
+    min-height: calc(100vh - 330px); /* Adjusted height to fill the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-section#welcome {
-    text-align: center;
+section {
     margin-bottom: 2em;
 }
 
-section#welcome h2 {
-    font-size: 5em; /* Significantly increased font size */
-}
-
-section#welcome p {
-    font-size: 2.5em; /* Significantly increased font size */
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+#welcome h2,
+#welcome p,
+.footer-text {
+    font-size: 2em; /* Increased font size */
 }
 
 .form-container {
@@ -86,26 +73,26 @@ footer {
     margin-top: 20px;
 }
 
-.form-container input[type="text"] {
-    padding: 20px; /* Increased padding */
-    font-size: 24px; /* Increased font size */
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+.search-box {
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
     outline: none;
-    width: 100%; /* Full width for responsive design */
-    max-width: 400px; /* Maximum width */
+    width: 70%;
+    height: 100%;
 }
 
 .form-container button {
-    padding: 20px 30px; /* Increased padding */
-    font-size: 24px; /* Increased font size */
-    border: 1px solid green;
-    border-left: none;
-    border-radius: 0 4px 4px 0;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: 2px solid green;
+    border-radius: 25px;
     background-color: white;
     color: darkgreen;
     cursor: pointer;
-    width: auto; /* Auto width for responsive design */
+    height: 100%;
+    width: 30%;
 }
 
 .form-container button:hover {
@@ -115,27 +102,13 @@ footer {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Responsive styles */
-@media (max-width: 800px) {
-    .logo {
-        position: static;
-        display: block;
-        margin: 0 auto;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .form-container input[type="text"] {
-        width: 100%; /* Full width for smaller screens */
-    }
-    
-    .form-container button {
-        width: 100%; /* Full width for smaller screens */
-        border-radius: 0 0 4px 4px;
-        border-left: 1px solid green;
-        border-top: none;
-    }
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
