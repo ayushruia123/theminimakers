@@ -22,6 +22,8 @@
                 <li><a href="#">Games</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Poems and Stories</a></li>
+                <li><a href="#">Krita</a></li>
             </ul>
         </nav>
     </header>
@@ -29,13 +31,25 @@
         <section id="welcome">
             <h2>Welcome to MiniMakers!</h2>
             <p>Join us on our creative journey with tutorials, games, and bird watching adventures!</p>
+            <div class="form-container">
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search..." class="search-box">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
         </section>
-        <div class="form-container">
-            <form action="/search" method="GET">
-                <input type="text" name="query" placeholder="Search..." class="search-box">
-                <button type="submit">Search</button>
-            </form>
-        </div>
+        <section id="photos">
+            <div class="photo-grid">
+                <!-- Add your photo URLs here -->
+                <img src="https://cdn.domestika.org/c_fill,dpr_auto,f_auto,h_1200,pg_1,t_base_params,w_1200/v1678786666/blog-post-covers/000/011/113/11113-original.png?1678786666" alt="Photo 1">
+                <img src="https://scratch.mit.edu/images/ideas/starter-projects-illustration.svg" alt="Photo 2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIv21fVRgWAuAwPDi0O_a7VgD8JOp3txGyyI1rKG6y6g&s" alt="Photo 3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6aw3SVQ1UioUcK8e5bXfobTs124hYa-sgSExvNEu9zNltHSDc1PphRXehLD1G0iTAa4&usqp=CAU" alt="Photo 4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXN9cVsrIuIzQAMrbpVpHb7wyAj7Iags-MsOjYOMUfcw&s" alt="Photo 5">
+                <img src="https://i.ytimg.com/vi/r95XoXmNB60/maxresdefault.jpg" alt="Photo 6">
+                <img src="https://m.media-amazon.com/images/I/71So+fAaCgL._AC_UF1000,1000_QL80_.jpg" alt="Photo 7">
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 MiniMakers. All rights reserved.</p>
