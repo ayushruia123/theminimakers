@@ -10,10 +10,10 @@ body {
 header {
     background-color: green;
     color: white;
-    padding: 2em; /* Increased padding */
+    padding: 2em;
     position: relative;
     text-align: center;
-    height: 50vh; /* 50% of viewport height */
+    height: 50vh;
 }
 
 .logo {
@@ -23,11 +23,11 @@ header {
 }
 
 .logo img {
-    height: 40px;
+    height: 140px;
 }
 
 h1.header-text {
-    font-size: 4em; /* Increased font size */
+    font-size: 4em;
 }
 
 nav ul {
@@ -35,37 +35,36 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    align-items: center; /* Align items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul li {
-    margin: 10px 0; /* Adjusted margin */
+    margin: 10px 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2em; /* Adjusted font size */
+    font-size: 2em;
 }
 
 main {
     padding: 1em;
-    min-height: calc(100vh - 330px); /* Adjusted height to fill the remaining space */
+    min-height: calc(100vh - 330px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 section {
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 #welcome h2,
-#welcome p,
-.footer-text {
-    font-size: 2em; /* Increased font size */
+#welcome p {
+    font-size: 2em;
 }
 
 .form-container {
@@ -74,25 +73,24 @@ section {
 }
 
 .search-box {
-    padding: 15px;
-    font-size: 18px;
+    padding: 20px;
+    font-size: 24px;
     border: 2px solid #ccc;
-    border-radius: 25px;
+    border-radius: 10px;
     outline: none;
-    width: 70%;
-    height: 100%;
+    width: 60%;
+    height: 50px;
 }
 
 .form-container button {
-    padding: 15px 25px;
-    font-size: 18px;
+    padding: 15px 30px;
+    font-size: 24px;
     border: 2px solid green;
-    border-radius: 25px;
+    border-radius: 10px;
     background-color: white;
     color: darkgreen;
     cursor: pointer;
-    height: 100%;
-    width: 30%;
+    margin-left: 10px;
 }
 
 .form-container button:hover {
@@ -102,13 +100,39 @@ section {
     transition: background-color 0.3s, color 0.3s;
 }
 
+#photos {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200px;
+    justify-content: center;
+    padding-bottom: 40px; /* Adding space at the bottom */
+}
+
+.photo-grid img {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(20deg);
+    transition: transform 0.3s;
+}
+
+.photo-grid img:hover {
+    transform: rotate(45deg);
+}
+
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 1em;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    font-size: 2.5em;
 }
-
