@@ -10,9 +10,38 @@
         <div class="logo">
             <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo">
         </div>
-        <h1 class="header-text">MiniMakers</h1>       
+        <h1 class="header-text">MiniMakers</h1>    
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>   
         <nav>
-            <ul>
+            <label class="burger-menu">
+              <input type="checkbox" />
+            </label>
+            <aside class="sidebar">
+                <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tinkercad</a></li>
+      <li><a href="#">Scratch</a></li>
+      <li><a href="#">Gdevelop</a></li>
+      <li><a href="#">Website Development</a></li>
+      <li><a href="#">Birding</a></li>
+      <li><a href="#">Games</a></li>
+      <li><a href="#">Poems and Stories</a></li>
+      <li><a href="#">Krita</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Us</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="https://ayushruia123.github.io/theminimakers/tinkercad" target="_blank">Tinkercad</a></li>
                 <li><a href="https://ayushruia123.github.io/theminimakers/scratch" target="_blank">Scratch</a></li>
@@ -22,10 +51,9 @@
                 <li><a href="#">Games</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Poems and Stories</a></li>
-                <li><a href="#">Krita</a></li>
             </ul>
         </nav>
+        <aside>
     </header>
     <main>
         <section id="welcome">
@@ -40,7 +68,6 @@
         </section>
         <section id="photos">
             <div class="photo-grid">
-                <!-- Add your photo URLs here -->
                 <img src="https://cdn.domestika.org/c_fill,dpr_auto,f_auto,h_1200,pg_1,t_base_params,w_1200/v1678786666/blog-post-covers/000/011/113/11113-original.png?1678786666" alt="Photo 1">
                 <img src="https://scratch.mit.edu/images/ideas/starter-projects-illustration.svg" alt="Photo 2">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIv21fVRgWAuAwPDi0O_a7VgD8JOp3txGyyI1rKG6y6g&s" alt="Photo 3">
@@ -54,5 +81,7 @@
     <footer>
         <p>&copy; 2024 MiniMakers. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
