@@ -23,7 +23,7 @@ header {
 }
 
 .logo img {
-    height: 40px;
+    height: 80px;
 }
 
 h1.header-text {
@@ -166,14 +166,14 @@ section {
 .photo-grid img {
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 180px;
     transform: rotate(20deg);
     transition: transform 0.3s;
 }
 
 .photo-grid img:hover {
-    transform: rotate(50deg);
+    transform: rotate(40deg);
 }
 
 footer {
