@@ -60,17 +60,37 @@
         #main-content h1 {
             color: #4CAF50;
         }
-        #video-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        #video-gallery iframe {
-            flex: 1 1 calc(33% - 40px);
-            max-width: 400px;
-            height: 225px;
-        }
+        
+        .video-container {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.video-container.active {
+    display: block;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
     </style>
 </head>
 <body>
@@ -175,7 +195,9 @@
   <div id="videos">
     <div class="video-container" data-topics="expansion rotation duplicate elevation shifting hide_tool group_n_ungroup">
       <h3>Monster Truck Video</h3>
+      <div class="video-wrapper">
       <iframe id="monster_truck" width="784" height="441" src="https://www.youtube.com/embed/dfVcOTWspYQ" title="Rev Up Your Design Skills: 3D Monster Truck Modelling Tutorial." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  	  </div>    	
       <ul>
         <li>Expansion: <a href="#" data-video="monster_truck" data-start="46" class="topic-link" data-topic="expansion">0:46</a></li>
         <li>Rotation: <a href="#" data-video="monster_truck" data-start="198" class="topic-link" data-topic="rotation">3:18</a></li>
@@ -188,7 +210,9 @@
     </div>
     <div class="video-container" data-topics="expansion rotation group_n_ungroup shape_editor shape_gallery">
       <h3>Hero Bike</h3>
+       <div class="video-wrapper">
       <iframe id="hero_bike" width="784" height="441" src="https://www.youtube.com/embed/6iz8NRlfjYY" title="Crafting the Bike of the Future: 3D Modeling in Tinkercad." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
       <ul>
         <li>Expansion: <a href="#" data-video="hero_bike" data-start="52" class="topic-link" data-topic="expansion">0:52</a></li>
     <li>Shape Gallery: <a href="#" data-video="hero_bike" data-start="61" class="topic-link"data-topic=shape_gallery>1:01</a></li>
@@ -198,11 +222,14 @@
   <li>Rotation: <a href="#" data-video="hero_bike" data-start="682" class="topic-link"data-topic="rotation">11.22</a></li>
     </ul>
     </div>
+
     
   <div id="videos">
     <div class="video-container" data-topics=" rotation shape_editor group_n_ungroup">
       <h3>Drone Video</h3>
+       <div class="video-wrapper">
      <iframe id="drone" width="784" height="441" src="https://www.youtube.com/embed/m9vCnKlWdcU" title="Tinkercad Drone Design: A Step-by-Step 3D Modeling Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     </div>
       <ul>
         
         <li>Rotation: <a href="#" data-video="drone" data-start="198" class="topic-link"data-topic=rotation>3:18</a></li>
@@ -242,7 +269,7 @@
   		          const startTime = link.getAttribute('data-start');
   		          const iframe = document.getElementById(videoId);
   		          const src = iframe.src.split('?')[0];
-  		          iframe.src = src+'?start='+startTime;
+  		          iframe.src = src+'?start='+startTime+'&autoplay=1&mute=1';
               }
             });
           } else {
