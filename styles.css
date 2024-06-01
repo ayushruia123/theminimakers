@@ -10,10 +10,12 @@ body {
 header {
     background-color: green;
     color: white;
-    padding: 2em;
-    position: relative;
+    padding: 1em; /* Adjust padding to make header slimmer */
     text-align: center;
-    height: 50vh;
+    height: auto; /* Allow header to adjust its height based on content */
+    width: 100%; /* Ensure header spans full width */
+    box-sizing: border-box;
+    position: relative;
 }
 
 .logo {
@@ -23,11 +25,13 @@ header {
 }
 
 .logo img {
-    height: 80px;
+    height: 70px; /* Height of the logo */
 }
 
 h1.header-text {
-    font-size: 4em;
+    font-size: 2em; /* Font size for header text */
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Adjust line height */
 }
 
 nav {
@@ -35,11 +39,11 @@ nav {
 }
 
 .burger-menu {
-    font-size: 2em;
+    font-size: 50px; /* Increase font size for burger menu */
     cursor: pointer;
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 20px; /* Adjust position */
+    right: 20px; /* Adjust position */
     color: white;
 }
 
@@ -54,12 +58,13 @@ nav {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    font-size: 1.5em; /* Adjusted font size */
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 16px 32px; /* Adjust padding */
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.5em; /* Adjust font size */
     color: darkgrey;
     display: block;
     transition: 0.3s;
@@ -77,8 +82,14 @@ nav {
     margin-left: 50px;
 }
 
+#mySearch {
+    font-size: 1.5em; /* Increased font size */
+    width: calc(100% - 64px); /* Adjust width to fit within padding */
+    padding: 10px; /* Added padding for better appearance */
+}
+
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
+  .sidenav {padding-top: 100px;}
   .sidenav a {font-size: 18px;}
 }
 
@@ -120,16 +131,6 @@ section {
     margin-top: 20px;
 }
 
-.search-box {
-    padding: 20px;
-    font-size: 24px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    outline: none;
-    width: 60%;
-    height: 50px;
-}
-
 .form-container button {
     padding: 15px 30px;
     font-size: 24px;
@@ -166,8 +167,8 @@ section {
 .photo-grid img {
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 200px;
-    height: 180px;
+    width: 500px;
+    height: 500px;
     transform: rotate(20deg);
     transition: transform 0.3s;
 }
@@ -180,59 +181,46 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 2em;
     width: 100%;
-    font-size: 1.25em;
-    height: 40px;
+    font-size: 3em;
+    height: 80px;
 }
 
 @media screen and (max-width: 768px) {
+    header {
+        padding: 2em; /* Increase padding to make header bigger */
+    }
+
     .header-text {
-        font-size: 3em;
+        font-size: 3em; /* Increase font size for header text */
     }
 
     .burger-menu {
-        font-size: 1.5em;
-        top: 10px;
-        right: 10px;
+        font-size: 75px; /* Increase font size for burger menu */
+        top: 20px;
+        right: 20px;
     }
 
     .sidenav a {
-        font-size: 20px;
+        font-size: 2em; /* Adjust font size for side navigation links */
     }
 
     .sidenav .closebtn {
-        font-size: 30px;
-        top: 15px;
+        font-size: 3em; /* Adjust font size for close button */
     }
 
     .search-box {
-        font-size: 18px;
-        width: 80%;
+        font-size: 1.5em; /* Adjust font size for search box */
     }
 
     .form-container button {
-        font-size: 18px;
+        font-size: 2em; /* Adjust font size for buttons */
         padding: 10px 20px;
     }
 
     .photo-grid img {
-        width: 100px;
-        height: 100px;
+        width: 100%; /* Adjust width for images */
+        height: auto; /* Maintain aspect ratio */
     }
-}
-header {
-    background-color: green;
-    color: white;
-    padding: 1em; /* Adjust the padding to your preference */
-    text-align: center;
-    height: auto; /* Allow the header to adjust its height based on content */
-}
-
-.sidenav {
-    font-size: 4em; /* Decrease the font size for the header text */
-}
-
-.sidenav {
-    width: 250px; /* Increase the width of the side navigation menu */
 }
