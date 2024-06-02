@@ -10,10 +10,9 @@ body {
 header {
     background-color: green;
     color: white;
-    padding: 1em; /* Adjust padding to make header slimmer */
+    padding: 2em; /* Adjust padding */
     text-align: center;
-    height: auto; /* Allow header to adjust its height based on content */
-    width: 100%; /* Ensure header spans full width */
+    width: 100%; /* Full width */
     box-sizing: border-box;
     position: relative;
 }
@@ -25,13 +24,14 @@ header {
 }
 
 .logo img {
-    height: 70px; /* Height of the logo */
+    height: 100px; /* Height of the logo */
 }
 
 h1.header-text {
     font-size: 2em; /* Font size for header text */
     margin: 0; /* Remove default margin */
     line-height: 1.5; /* Adjust line height */
+    font-family: 'YourCustomFont', sans-serif; /* Apply custom font if available */
 }
 
 nav {
@@ -39,11 +39,12 @@ nav {
 }
 
 .burger-menu {
-    font-size: 50px; /* Increase font size for burger menu */
+    font-size: 75px; /* Increase font size for burger menu */
     cursor: pointer;
     position: absolute;
-    top: 20px; /* Adjust position */
-    right: 20px; /* Adjust position */
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     color: white;
 }
 
@@ -167,14 +168,13 @@ section {
 .photo-grid img {
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 500px;
-    height: 500px;
-    transform: rotate(20deg);
+    width: 400px;
+    height: 400px;
     transition: transform 0.3s;
 }
 
 .photo-grid img:hover {
-    transform: rotate(40deg);
+    transform: scale(1.05);
 }
 
 footer {
@@ -183,13 +183,12 @@ footer {
     text-align: center;
     padding: 2em;
     width: 100%;
-    font-size: 3em;
-    height: 80px;
+    font-size: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
     header {
-        padding: 2em; /* Increase padding to make header bigger */
+        padding: 3em 1em; /* Increase padding to make header bigger */
     }
 
     .header-text {
@@ -198,8 +197,9 @@ footer {
 
     .burger-menu {
         font-size: 75px; /* Increase font size for burger menu */
-        top: 20px;
+        top: 50%;
         right: 20px;
+        transform: translateY(-50%);
     }
 
     .sidenav a {
@@ -223,4 +223,22 @@ footer {
         width: 100%; /* Adjust width for images */
         height: auto; /* Maintain aspect ratio */
     }
+}
+.hero-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.spectacles {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%; /* Adjust size to fit the face */
 }
