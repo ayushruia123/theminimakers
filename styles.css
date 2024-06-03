@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 header {
@@ -36,6 +37,7 @@ h1.header-text {
 
 nav {
     position: relative;
+    display: flex;
 }
 
 .burger-menu {
@@ -80,25 +82,15 @@ nav {
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
 }
 
-#mySearch {
-    font-size: 1.5em; /* Increased font size */
-    width: calc(100% - 64px); /* Adjust width to fit within padding */
-    padding: 10px; /* Added padding for better appearance */
-}
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 100px;}
-  .sidenav a {font-size: 18px;}
-}
+
+
 
 main {
     padding: 1em;
     min-height: calc(100vh - 330px);
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -118,7 +110,7 @@ section {
 
 .hero img {
     width: 100%;
-    max-width: 800px;
+    
     border-radius: 10px;
 }
 
@@ -153,14 +145,10 @@ section {
 #photos {
     margin-top: 40px;
     margin-bottom: 40px;
-    display: flex;
     justify-content: center;
 }
 
 .photo-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 200px;
     justify-content: center;
     padding-bottom: 40px;
 }
@@ -168,7 +156,6 @@ section {
 .photo-grid img {
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 400px;
     height: 400px;
     transition: transform 0.3s;
 }
@@ -186,44 +173,6 @@ footer {
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        padding: 3em 1em; /* Increase padding to make header bigger */
-    }
-
-    .header-text {
-        font-size: 3em; /* Increase font size for header text */
-    }
-
-    .burger-menu {
-        font-size: 75px; /* Increase font size for burger menu */
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-    }
-
-    .sidenav a {
-        font-size: 2em; /* Adjust font size for side navigation links */
-    }
-
-    .sidenav .closebtn {
-        font-size: 3em; /* Adjust font size for close button */
-    }
-
-    .search-box {
-        font-size: 1.5em; /* Adjust font size for search box */
-    }
-
-    .form-container button {
-        font-size: 2em; /* Adjust font size for buttons */
-        padding: 10px 20px;
-    }
-
-    .photo-grid img {
-        width: 100%; /* Adjust width for images */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
 .hero-wrapper {
     position: relative;
     display: inline-block;
@@ -231,7 +180,7 @@ footer {
 
 .hero-image {
     width: 100%;
-    max-width: 800px;
+    
     border-radius: 10px;
 }
 
