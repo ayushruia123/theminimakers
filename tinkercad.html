@@ -314,7 +314,7 @@
   		          const startTime = link.getAttribute('data-start');
   		          const iframe = document.getElementById(videoId);
   		          const src = iframe.src.split('?')[0];
-  		          iframe.src = src+'?start='+startTime+'&autoplay=1&mute=1';
+  		          iframe.src = src+'?start='+startTime;
               }
             });
           } else {
