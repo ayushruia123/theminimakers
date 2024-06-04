@@ -6,139 +6,145 @@
     <title>MiniMakers</title>
 <style>
     body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Navbar styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: green;
-    padding: 10px 20px;
-}
-
-.navbar .logo {
-    color: white;
-    font-size: 1.5em;
-}
-
-.navbar .logo img {
-    height: 70px; /* Height of the logo */
-}
-
-.navbar .name {
-    color: white;
-    font-size: 2em;
-}
-
-.navbar .menu {
-    display: flex;
-}
-
-.navbar .menu a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.navbar .burger {
-    display: none;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-}
-
-/* Sidebar styles */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 2em;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .navbar .menu {
-        display: none;
+        margin: 0;
+        font-family: Arial, sans-serif;
     }
 
-    .navbar .burger {
-        display: block;
+    /* Navbar styles */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: green;
+        padding: 10px 20px;
+    }
+
+    .navbar .logo {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .navbar .logo img {
+        height: 70px; /* Height of the logo */
     }
 
     .navbar .name {
-        flex-grow: 1;
-        text-align: center;
-    }
-}
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0.5em;
-    width: 100%;
-    font-size: 1.5em;
-}
-
-/* Add this to your existing CSS */
-
-/* Styles for mobile devices */
-@media screen and (max-width: 768px) {
-    iframe {
-        width: 100%; /* Make the iframes take up the full width of the screen */
-        height: auto; /* Adjust the height to maintain the aspect ratio */
+        color: white;
+        font-size: 2em;
     }
 
     .navbar .menu {
-        display: none;
+        display: flex;
+    }
+
+    .navbar .menu a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
     }
 
     .navbar .burger {
+        display: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: white;
         display: block;
+        transition: 0.3s;
     }
 
-    .navbar .name {
-        flex-grow: 1;
+    .sidebar a:hover {
+        background-color: #575757;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 2em;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+        .navbar .menu {
+            display: none;
+        }
+
+        .navbar .burger {
+            display: block;
+        }
+
+        .navbar .name {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+
+    footer {
+        background-color: black;
+        color: white;
         text-align: center;
+        padding: 0.5em;
+        width: 100%;
+        font-size: 1.5em;
     }
-}
 
-/* Adjust iframe height for better visibility on mobile */
-@media screen and (max-width: 480px) {
-    iframe {
-        width: 100%; /* Make the iframes take up the full width of the screen */
-        height: 300px; /* Set a specific height for the iframes on very small screens */
+    /* Add this to your existing CSS */
+
+    /* Styles for mobile devices */
+    @media screen and (max-width: 768px) {
+        iframe {
+            width: 100%; /* Make the iframes take up the full width of the screen */
+            height: auto; /* Adjust the height to maintain the aspect ratio */
+        }
+
+        .navbar .menu {
+            display: none;
+        }
+
+        .navbar .burger {
+            display: block;
+        }
+
+        .navbar .name {
+            flex-grow: 1;
+            text-align: center;
+        }
     }
-}
 
+    /* Adjust iframe height for better visibility on mobile */
+    @media screen and (max-width: 480px) {
+        iframe {
+            width: 100%; /* Make the iframes take up the full width of the screen */
+            height: 300px; /* Set a specific height for the iframes on very small screens */
+        }
+    }
+
+    .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
 </style>
 
 <script>
@@ -155,7 +161,8 @@ function toggleSidebar() {
 <body>
     <nav class="navbar">
         <div class="logo">
-        <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo"></div>
+            <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo">
+        </div>
         <div class="name"><b>MiniMakers</b></div>
         <div class="menu">
             <a href="index.html">Home</a>
@@ -172,31 +179,29 @@ function toggleSidebar() {
     </nav>
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-         <a href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="tinkercad.html">Tinkercad</a>
         <a href="scratch.html">Scratch</a>
         <a href="gdevelop.html">Gdevelop</a>
     </div>
 
+    <h2>Games in Scratch</h2>
 
-<h2> Games in Scratch </h2>
+    <br>
+    <br>
+    <br>
 
-<br>
-<br>
-<br>
+    <h3>Ballon Pop Game</h3>
+    
+    <iframe src="https://scratch.mit.edu/projects/872880701/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
-<h3> Ballon Pop Game </h3> 
+    <h4> Snake Game </h4>
 
-<iframe src="https://scratch.mit.edu/projects/872880701/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <iframe src="https://scratch.mit.edu/projects/876097267/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
-<h4> Snake Game </h4>
-
-<iframe src="https://scratch.mit.edu/projects/876097267/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-
-
-<footer>
+    footer>
         <p>&copy; 2024 MiniMakers. All rights reserved.</p>
-    </footer>
+    </footer> 
 
-    </body>
+</body>
 </html>
