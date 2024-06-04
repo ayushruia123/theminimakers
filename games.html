@@ -99,59 +99,6 @@
     }
 }
 
-section {
-    margin-top: 2em;
-}
-
-#welcome h2,
-#welcome p {
-    font-size: 2em;
-    text-align: center;
-}
-
-.hero {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.hero img {
-    width: 100%;
-    
-    border-radius: 10px;
-}
-
-.hero .caption {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-/* Photo gallery styles */
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0px;
-    padding: 10px;
-}
-
-.photo-gallery img {
-    width: 90%;
-    height: 90;
-}
-
-/* Responsive styles for photo gallery */
-@media screen and (max-width: 768px) {
-    .photo-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .photo-gallery {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-
 footer {
     background-color: black;
     color: white;
@@ -161,9 +108,41 @@ footer {
     font-size: 1.5em;
 }
 
+/* Add this to your existing CSS */
+
+/* Styles for mobile devices */
+@media screen and (max-width: 768px) {
+    iframe {
+        width: 100%; /* Make the iframes take up the full width of the screen */
+        height: auto; /* Adjust the height to maintain the aspect ratio */
+    }
+
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .burger {
+        display: block;
+    }
+
+    .navbar .name {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+/* Adjust iframe height for better visibility on mobile */
+@media screen and (max-width: 480px) {
+    iframe {
+        width: 100%; /* Make the iframes take up the full width of the screen */
+        height: 300px; /* Set a specific height for the iframes on very small screens */
+    }
+}
+
 </style>
+
 <script>
-    function toggleSidebar() {
+function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     if (sidebar.style.width === '250px') {
         sidebar.style.width = '0';
@@ -171,7 +150,7 @@ footer {
         sidebar.style.width = '250px';
     }
 }
-    </script>
+</script>
 </head>
 <body>
     <nav class="navbar">
@@ -199,41 +178,25 @@ footer {
         <a href="gdevelop.html">Gdevelop</a>
     </div>
 
-        <section id="welcome">
-            <div class="hero">
-                <img src="images/hero image.png" alt="Hero Image" class="hero-image">
-                <p class="caption"><b>Geek is my Middle Name!</b></p>
-            </div>
-            
-            <p>Join us on our creative journey with tutorials, games, and bird watching adventures!</p>
-        </section>
 
-        <div class="photo-gallery">
-            <a href="file:///C:/Users/Gaming/Documents/GitHub/theminimakers/tinkercad.html">
-            <img src="https://morseinstitute.org/wp-content/uploads/2017/12/logo-tinkercad-256.png" alt="Photo 1"></a>
+<h2> Games in Scratch </h2>
+
+<br>
+<br>
+<br>
+
+<h3> Ballon Pop Game </h3> 
+
+<iframe src="https://scratch.mit.edu/projects/872880701/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+
+<h4> Snake Game </h4>
+
+<iframe src="https://scratch.mit.edu/projects/876097267/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 
-            <a href="file:///C:/Users/Gaming/Documents/GitHub/theminimakers/scratch.html">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdpztLKbqCWG3YCX8iHE0b27cmPfVZdbSFig&s" alt="Photo 2">
+<footer>
+        <p>&copy; 2024 MiniMakers. All rights reserved.</p>
+    </footer>
 
-            <a href="https://example.com/page1"> 
-            <img src="images/gdeve.png" alt="Photo 3"> 
-
-            <a href="https://example.com/page1">
-            <img src="images/photo.png" alt="Photo 4">
-
-            <a href="https://example.com/page1">
-           <img src="images/rtht.png" alt="Photo 6">
-
-           <a href="https://example.com/page1">
-            <img src="images/htr.png" alt="Photo 7"> 
-
-            <a href="https://example.com/page1">
-            <img src="images/kri.png" alt="Photo 5">
-
-            <a href="https://example.com/page1">
-            <img src="https://play-lh.googleusercontent.com/UHrjjq4SyPeavB3dBcMeVwaSoiSgTycBx0-L6EqNL14XDJLJnZuan17XAXxiJ90i_Nd0" alt="Photo 8"> 
-             
-        </div>    
-</body>
+    </body>
 </html>
