@@ -99,16 +99,102 @@
     }
 }
 
-div.scroll-container {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
+body {
+  font-family: Arial;
+  margin: 0;
 }
 
-div.scroll-container img {
-  padding: 10px;
+* {
+  box-sizing: border-box;
 }
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 </style>
 <script>
     function toggleSidebar() {
@@ -147,26 +233,162 @@ div.scroll-container img {
         <a href="gdevelop.html">Gdevelop</a>
     </div>
 
-<h2 style="text-align: center; Kingfishers"> </h2>
+<h2 style="text-align:center">Slideshow Gallery 1</h2>
 
-    <div class="scroll-container">
-  <img src="images/kingfisher 1.jpg" alt="Cinque Terre" width="600" height="400">
-  <img src="images/kingfisher 2.jpg" alt="Forest" width="600" height="400">
-  <img src="images/storkbilled kingfisher.jpg" alt="Northern Lights" width="600" height="400">
-</div>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container" id="slideshow1">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img_woods_wide.jpg" style="width:100%">
+  </div>
 
-<h2 style="text-align: center; Barbets"> </h2>
- <div class="scroll-container">
-  <img src="images/kingfisher 1.jpg" alt="Cinque Terre" width="600" height="400">
-  <img src="images/kingfisher 2.jpg" alt="Forest" width="600" height="400">
-  <img src="images/stork billed kingfisher.jpg" alt="Northern Lights" width="600" height="400">
-</div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img_5terre_wide.jpg" style="width:100%">
+  </div>
 
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img_mountains_wide.jpg" style="width:100%">
+  </div>
     
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img_lights_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+  <a class="next" onclick="plusSlides(1, 1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption1"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1, 1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2, 1)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3, 1)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4, 1)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5, 1)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6, 1)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<h2 style="text-align:center">Slideshow Gallery 2</h2>
+
+<div class="container" id="slideshow2">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="img_woods_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="img_5terre_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="img_mountains_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="img_lights_wide.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="img_nature_wide.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="img_snow_wide.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1, 2)">❮</a>
+  <a class="next" onclick="plusSlides(1, 2)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption2"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1, 2)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2, 2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3, 2)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4, 2)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5, 2)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6, 2)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndices = [1, 1, 1, 1, 1];
+showSlides(1, 1);
+showSlides(1, 2);
+// Add more function calls here for additional slideshows
+
+function plusSlides(n, no) {
+  showSlides(slideIndices[no - 1] += n, no);
+}
+
+function currentSlide(n, no) {
+  showSlides(slideIndices[no - 1] = n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let slides = document.querySelectorAll('#slideshow' + no + ' .mySlides');
+  let dots = document.querySelectorAll('#slideshow' + no + ' .demo');
+  let captionText = document.getElementById('caption' + no);
+  if (n > slides.length) {slideIndices[no - 1] = 1}
+  if (n < 1) {slideIndices[no - 1] = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndices[no - 1] - 1].style.display = "block";
+  dots[slideIndices[no - 1] - 1].className += " active";
+  captionText.innerHTML = dots[slideIndices[no - 1] - 1].alt;
+}
+</script>
+        
 </body>
 </html>
