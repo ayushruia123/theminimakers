@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R851E3VFC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6R851E3VFC');
+</script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniMakers</title>
+     <link rel="icon" type="image/png" sizes="32x32" href="images/photo.png">
+    <title>Birding Photos</title>
 <style>
+
+
     body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+.sidebar {
+      z-index: 1000; /* Higher z-index to be in front */
+      position: relative; /* Ensure position is set */
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+.container {
+  border: 1px solid black;
+  padding: 10px; 
+  margin: 10px 0;
+}
 /* Navbar styles */
 .navbar {
     display: flex;
@@ -168,7 +196,7 @@ img {
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color: green;
   padding: 2px 16px;
   color: white;
 }
@@ -195,6 +223,14 @@ img {
   opacity: 1;
 }
 
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    font-size: 1.5em;
+}
 </style>
 <script>
     function toggleSidebar() {
@@ -213,121 +249,48 @@ img {
         <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo"></div>
         <div class="name"><b>MiniMakers</b></div>
         <div class="menu">
-            <a href="index.html">Home</a>
+         <a href="index.html">Home</a>
             <a href="tinkercad.html">Tinkercad</a>
             <a href="scratch.html">Scratch</a>
             <a href="gdevelop.html">Gdevelop</a>
-            <a href="">Web Dev</a>
-            <a href="">Photography</a>
-            <a href="">Krita</a>
-            <a href="">Games</a>
+            <a href="web dev.html">Web Dev</a>
+            <a href="birding photos.html">Photography</a>
+            <a href="krita.html">Krita</a>
+            <a href="games.html">Games</a>
             <a href="">Poems & Stories</a>
         </div>
         <div class="burger" onclick="toggleSidebar()">☰</div>
     </nav>
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-         <a href="index.html">Home</a>
-        <a href="tinkercad.html">Tinkercad</a>
-        <a href="scratch.html">Scratch</a>
-        <a href="gdevelop.html">Gdevelop</a>
+          <a href="index.html">Home</a>
+            <a href="tinkercad.html">Tinkercad</a>
+            <a href="scratch.html">Scratch</a>
+            <a href="gdevelop.html">Gdevelop</a>
+            <a href="web dev.html">Web Dev</a>
+            <a href="birding photos.html">Photography</a>
+            <a href="krita.innerHTML">Krita</a>
+            <a href="games.html">Games</a>
+            <a href="">Poems & Stories</a>
     </div>
+<h1 style="text-align:center">Birding Pics </h1>
 
-<h2 style="text-align:center">Slideshow Gallery 1</h2>
-
-<div class="container" id="slideshow1">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="img_woods_wide.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="img_5terre_wide.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="img_mountains_wide.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="img_lights_wide.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="img_nature_wide.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="img_snow_wide.jpg" style="width:100%">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
-  <a class="next" onclick="plusSlides(1, 1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption1"></p>
-  </div>
-
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1, 1)" alt="The Woods">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2, 1)" alt="Cinque Terre">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3, 1)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4, 1)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5, 1)" alt="Nature and sunrise">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6, 1)" alt="Snowy Mountains">
-    </div>
-  </div>
-</div>
-
-<h2 style="text-align:center">Slideshow Gallery 2</h2>
+<h2 style="text-align:center">Kingfishers</h2>
 
 <div class="container" id="slideshow2">
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="img_woods_wide.jpg" style="width:100%">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczPFzcorpT-YfL7huT3yIyChAmT1yVmzXe5AMvoQJdVBXXa2UZ_SGaHnYgWiyuYjgedVrcpXe-KHao4ucxq_c_SyFsPK5vb0mIYijJU_a0t5u1J8R2s=w2400?source=screenshot.guru"  style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczP174y4VdZ5uWPZK-XRFSaKscpDwYvl9J9lJRucINy2J4VWL7J_40hDDUTF9EiEHWuPm75b7mpnliJ1mxKZdvfeKMdHPHGPP0xJv3rsbyJZstm6R5U=w2400?source=screenshot.guru"  style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="img_5terre_wide.jpg" style="width:100%">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczNwLvxz0xlF8qrXWVr8iM6TM1YmNpAvyPBA-QT-bHch5WPaj3l-Yw4WA_JUuH9o0WWv4nyxMio33i8nZr64cOV9nhdj5Y-pkEGfQansCvEmuk0Z1VY=w2400?source=screenshot.guru" style="width:100%">
   </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="img_mountains_wide.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="img_lights_wide.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="img_nature_wide.jpg" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="img_snow_wide.jpg" style="width:100%">
-  </div>
-    
   <a class="prev" onclick="plusSlides(-1, 2)">❮</a>
   <a class="next" onclick="plusSlides(1, 2)">❯</a>
 
@@ -337,58 +300,255 @@ img {
 
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1, 2)" alt="The Woods">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczPFzcorpT-YfL7huT3yIyChAmT1yVmzXe5AMvoQJdVBXXa2UZ_SGaHnYgWiyuYjgedVrcpXe-KHao4ucxq_c_SyFsPK5vb0mIYijJU_a0t5u1J8R2s=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(1, 2)" alt="Kingfisher seated">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2, 2)" alt="Cinque Terre">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczP174y4VdZ5uWPZK-XRFSaKscpDwYvl9J9lJRucINy2J4VWL7J_40hDDUTF9EiEHWuPm75b7mpnliJ1mxKZdvfeKMdHPHGPP0xJv3rsbyJZstm6R5U=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(2, 2)" alt="Kingfisher seated on a tree">
     </div>
     <div class="column">
-      <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3, 2)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4, 2)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5, 2)" alt="Nature and sunrise">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6, 2)" alt="Snowy Mountains">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczNwLvxz0xlF8qrXWVr8iM6TM1YmNpAvyPBA-QT-bHch5WPaj3l-Yw4WA_JUuH9o0WWv4nyxMio33i8nZr64cOV9nhdj5Y-pkEGfQansCvEmuk0Z1VY=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(3, 2)" alt="Stork Billed Kingfisher ">
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Barbets</h2>
 
+<div class="container" id="slideshow1">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczMwKHnQvS4t8DSZG9zMBM8GhX6LD5LRBUiTyiyonT83u9DNCT_HUkBAkPCB06CdvFyagc5cXpA62Gi5lLpvRvbPdhLOmpwM-DiwpPYpGQBe4CYfaWA=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczM5O1AqXLWNdB0PB1dHI1FACXc9f79o0h9cWh-iLVv1t7V6jPwQ75J8a2Ih3KcYmc7uIgfVG33Cv70XduAcFtnAeCZATgRkwmh1Pctw0CAMGI_zXeQ=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczMrPzptR5AaxcpKPruqkJnDauaHseKiK1_pI-2F4qNQk2erzsoW4aD_HJXEOljHq-Va55y1GLWw-49ppP-fOZn1ibq5C_eVOksoK1pqusYs_47ZiT0=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOP4rxJYn9r9WvR_hPI1jFyLK_LeLIif9APieml2q220e3KyUbgeNFUYg9idiRtryVSN8yPOlE3LzS7duyAKRgRWKjglckSupPA4k5TURIglyDbC90=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+  <a class="next" onclick="plusSlides(1, 1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption1"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczMwKHnQvS4t8DSZG9zMBM8GhX6LD5LRBUiTyiyonT83u9DNCT_HUkBAkPCB06CdvFyagc5cXpA62Gi5lLpvRvbPdhLOmpwM-DiwpPYpGQBe4CYfaWA=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(1, 1)" alt="Blue Throated Barbet">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczM5O1AqXLWNdB0PB1dHI1FACXc9f79o0h9cWh-iLVv1t7V6jPwQ75J8a2Ih3KcYmc7uIgfVG33Cv70XduAcFtnAeCZATgRkwmh1Pctw0CAMGI_zXeQ=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(2, 1)" alt="Coppersmith Barbet">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczMrPzptR5AaxcpKPruqkJnDauaHseKiK1_pI-2F4qNQk2erzsoW4aD_HJXEOljHq-Va55y1GLWw-49ppP-fOZn1ibq5C_eVOksoK1pqusYs_47ZiT0=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(3, 1)" alt="Lineated Barbet peeping from his home">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczOP4rxJYn9r9WvR_hPI1jFyLK_LeLIif9APieml2q220e3KyUbgeNFUYg9idiRtryVSN8yPOlE3LzS7duyAKRgRWKjglckSupPA4k5TURIglyDbC90=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(5, 1)" alt="Lineated Barbet opening his mouth">
+    </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Common Birds</h2>
+
+<div class="container" id="slideshow3">
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczN_-otrP5wHo5yteqYnoUTRH2B7G2FV_MYIoxXgDG6lnNdFHAI0Xcbzg7RxRGFQDwnT_ndj3N1qZ3-kVTRcK9hqvoZu54kHvk2AfkIa-5fzMaMrk-g=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczO4envuaOY-3g4qy5y6b7twpWLtjF2Ggnw2_J5kyConkgYHwP_diwHA3Y1jetKAgsGk8sj_wgm2VBfqMbG-TxlG82Ql8R_DM99LVk9jCBHdGIk0cdg=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczPC7MDRPRI0F63IPCviUHSGkZUvWYlbYfHZd48mpDUjd-CBVu8kS9lZT5dOJn4dit2AXUUhrd3IiUIKer4wZITbAABCNrzCkre6hhhgTgxwz6klrj8=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1, 3)">❮</a>
+  <a class="next" onclick="plusSlides(1, 3)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption3"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczN_-otrP5wHo5yteqYnoUTRH2B7G2FV_MYIoxXgDG6lnNdFHAI0Xcbzg7RxRGFQDwnT_ndj3N1qZ3-kVTRcK9hqvoZu54kHvk2AfkIa-5fzMaMrk-g=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(1, 3)" alt="Oriental Darter on one leg">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczO4envuaOY-3g4qy5y6b7twpWLtjF2Ggnw2_J5kyConkgYHwP_diwHA3Y1jetKAgsGk8sj_wgm2VBfqMbG-TxlG82Ql8R_DM99LVk9jCBHdGIk0cdg=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(2, 3)" alt="Group of Cormorants">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczPC7MDRPRI0F63IPCviUHSGkZUvWYlbYfHZd48mpDUjd-CBVu8kS9lZT5dOJn4dit2AXUUhrd3IiUIKer4wZITbAABCNrzCkre6hhhgTgxwz6klrj8=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(3, 3)" alt="White Breasted Waterhen">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Rare Birds</h2>
+
+<div class="container" id="slideshow4">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOnFXWGrAJ27o0_rWVxNpvDL9-_Pyan6buo0W5sVhUC1lJ0bJLxoIGGNndY7u49cyaiMWbvfS5VonjvD3XVYoRVtX1120JgHyRLjpVwCTB1nqN1e0M=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczMhG9npuf2mgE9wtV76BtmScZ8DZOz11WZGzQFm3fEVT2oTL860GDd_2UD-ZhkuU6c-Xgk_lV7_NbCmYYyV1nyW43ZyUCMc_I7lOkzpm-7P8eKc-dc=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOnFXWGrAJ27o0_rWVxNpvDL9-_Pyan6buo0W5sVhUC1lJ0bJLxoIGGNndY7u49cyaiMWbvfS5VonjvD3XVYoRVtX1120JgHyRLjpVwCTB1nqN1e0M=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczNP6ep5xdPvgdOMoH38jokNJtrqI7GguwiGy_9pxDi1Y2XNO6GrY_Nhhcag8OaDX4AOFt2VY-zuE4Mq42P0v7n85gacTby8bJvgL3BtOWASUK7gt-k=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczNsHz-sMAdxYxZQJ8UfzNl31ePlFzVFtHFK62TDWxOZWxrBIPjtTbRNr-Jqpmzqm-WCk6m2GuYeRLMPxF1wzs3HI4LEmxTZwcYcI13o9IWDoI8UozY=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1, 4)">❮</a>
+  <a class="next" onclick="plusSlides(1, 4)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption4"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczOnFXWGrAJ27o0_rWVxNpvDL9-_Pyan6buo0W5sVhUC1lJ0bJLxoIGGNndY7u49cyaiMWbvfS5VonjvD3XVYoRVtX1120JgHyRLjpVwCTB1nqN1e0M=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(1, 4)" alt="Black Crowned Night Heron">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczMhG9npuf2mgE9wtV76BtmScZ8DZOz11WZGzQFm3fEVT2oTL860GDd_2UD-ZhkuU6c-Xgk_lV7_NbCmYYyV1nyW43ZyUCMc_I7lOkzpm-7P8eKc-dc=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(2, 4)" alt="Greater Coucal">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczOnFXWGrAJ27o0_rWVxNpvDL9-_Pyan6buo0W5sVhUC1lJ0bJLxoIGGNndY7u49cyaiMWbvfS5VonjvD3XVYoRVtX1120JgHyRLjpVwCTB1nqN1e0M=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(3, 4)" alt="Oriental Magpie Robin">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczNP6ep5xdPvgdOMoH38jokNJtrqI7GguwiGy_9pxDi1Y2XNO6GrY_Nhhcag8OaDX4AOFt2VY-zuE4Mq42P0v7n85gacTby8bJvgL3BtOWASUK7gt-k=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(4, 4)" alt="Koel">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczNsHz-sMAdxYxZQJ8UfzNl31ePlFzVFtHFK62TDWxOZWxrBIPjtTbRNr-Jqpmzqm-WCk6m2GuYeRLMPxF1wzs3HI4LEmxTZwcYcI13o9IWDoI8UozY=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(6, 4)" alt="Black Hooded Oriole">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Other Birds</h2>
+
+<div class="container" id="slideshow5">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOttu_piw0ErVO0HbDTjTbPBqV6-aIpr-x2p6dQyNzjgKTvuSq6APsyem4WWHohuoyCqIQBIm5ZKn2o4mgo1NcwyA73OU6Xl2K_qvBncfjfkoSYFTM=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczMte3LH0TtIWo0gD4axs0HxYTxY0Lgnqk3tajlCT7nMZXScNXDrbpN8ap5gan1x0-RQx1RbIDzbGk67jtk2WfVg-G8dd526RFF33Jml9bl8UPrLCqw=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOX7pJ4vSMslyoC58j9yVIbXeeZSbiiNjnjmTECP789U5GzJMO1FqVD1QAsEiYYXGQUFtVQmTcBvPhv8gHIAGFx55UGKbh5vTlcODDiimK30QpNNS8=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="https://lh3.googleusercontent.com/pw/AP1GczOQeSbH30PTiPuKDVFq7S9IaRGYBFRg-i6i38azbJ3i0ZyOxdkOMs2FkoVabt6KZZxwJr6zZt_eNrk1xWyGDnsx6r7Lj5N_oE07rTLVNPyWEgFQ_3E=w2400?source=screenshot.guru" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1, 5)">❮</a>
+  <a class="next" onclick="plusSlides(1, 5)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption5"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczOttu_piw0ErVO0HbDTjTbPBqV6-aIpr-x2p6dQyNzjgKTvuSq6APsyem4WWHohuoyCqIQBIm5ZKn2o4mgo1NcwyA73OU6Xl2K_qvBncfjfkoSYFTM=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(1, 5)" alt="Yellow Footed Green Pigeon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczMte3LH0TtIWo0gD4axs0HxYTxY0Lgnqk3tajlCT7nMZXScNXDrbpN8ap5gan1x0-RQx1RbIDzbGk67jtk2WfVg-G8dd526RFF33Jml9bl8UPrLCqw=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(2, 5)" alt="Rufous treepie">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczOQeSbH30PTiPuKDVFq7S9IaRGYBFRg-i6i38azbJ3i0ZyOxdkOMs2FkoVabt6KZZxwJr6zZt_eNrk1xWyGDnsx6r7Lj5N_oE07rTLVNPyWEgFQ_3E=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(3, 5)" alt="Parakeet">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://lh3.googleusercontent.com/pw/AP1GczOX7pJ4vSMslyoC58j9yVIbXeeZSbiiNjnjmTECP789U5GzJMO1FqVD1QAsEiYYXGQUFtVQmTcBvPhv8gHIAGFx55UGKbh5vTlcODDiimK30QpNNS8=w2400?source=screenshot.guru" style="width:100%" onclick="currentSlide(4, 5)" alt="Red Vented Bulbul">
+    </div>
+    
+    
 <script>
-let slideIndices = [1, 1, 1, 1, 1];
-showSlides(1, 1);
-showSlides(1, 2);
-// Add more function calls here for additional slideshows
+let slideIndex = [1, 1, 1, 1, 1];
+let slideId = ["slideshow1", "slideshow2", "slideshow3", "slideshow4", "slideshow5"];
 
 function plusSlides(n, no) {
-  showSlides(slideIndices[no - 1] += n, no);
+  showSlides(slideIndex[no - 1] += n, no);
 }
 
 function currentSlide(n, no) {
-  showSlides(slideIndices[no - 1] = n, no);
+  showSlides(slideIndex[no - 1] = n, no);
 }
 
 function showSlides(n, no) {
   let i;
-  let slides = document.querySelectorAll('#slideshow' + no + ' .mySlides');
-  let dots = document.querySelectorAll('#slideshow' + no + ' .demo');
-  let captionText = document.getElementById('caption' + no);
-  if (n > slides.length) {slideIndices[no - 1] = 1}
-  if (n < 1) {slideIndices[no - 1] = slides.length}
+  let slides = document.querySelectorAll(`#${slideId[no - 1]} .mySlides`);
+  let dots = document.querySelectorAll(`#${slideId[no - 1]} .demo`);
+  let captionText = document.getElementById(`caption${no}`);
+  if (n > slides.length) {slideIndex[no - 1] = 1}
+  if (n < 1) {slideIndex[no - 1] = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndices[no - 1] - 1].style.display = "block";
-  dots[slideIndices[no - 1] - 1].className += " active";
-  captionText.innerHTML = dots[slideIndices[no - 1] - 1].alt;
+  slides[slideIndex[no - 1] - 1].style.display = "block";
+  dots[slideIndex[no - 1] - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex[no - 1] - 1].alt;
 }
+
+// Initialize all slideshows
+for (let i = 1; i <= slideIndex.length; i++) {
+  showSlides(1, i);
+}
+
 </script>
-        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+        <p>&copy; 2024 MiniMakers. All rights reserved.</p>
+    </footer> 
+
 </body>
 </html>
