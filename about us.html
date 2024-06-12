@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMakers</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar styles */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: green;
+        padding: 10px 20px;
+    }
+
+    .navbar .logo {
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .navbar .logo img {
+        height: 70px; /* Height of the logo */
+    }
+
+    .navbar .name {
+        color: white;
+        font-size: 2em;
+    }
+
+    .navbar .menu {
+        display: flex;
+    }
+
+    .navbar .menu a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    .navbar .burger {
+        display: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 1.2em;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        background-color: #575757;
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 2em;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+        .navbar .menu {
+            display: none;
+        }
+
+        .navbar .burger {
+            display: block;
+        }
+
+        .navbar .name {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 0.5em;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    /* Add this to your existing CSS */
+
+    /* Styles for mobile devices */
+    @media screen and (max-width: 768px) {
+        iframe {
+            width: 100%; /* Make the iframes take up the full width of the screen */
+            height: auto; /* Adjust the height to maintain the aspect ratio */
+        }
+
+        .navbar .menu {
+            display: none;
+        }
+
+        .navbar .burger {
+            display: block;
+        }
+
+        .navbar .name {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        #qr img {
+            width: 100px; /* Adjust the width of the QR code image */
+            height: auto; /* Maintain aspect ratio */
+        }
+    }
+
+    /* Adjust iframe height for better visibility on mobile */
+    @media screen and (max-width: 480px) {
+        iframe {
+            width: 100%; /* Make the iframes take up the full width of the screen */
+            height: 300px; /* Set a specific height for the iframes on very small screens */
+        }
+
+        #qr img {
+            width: 75px; /* Further adjust the width of the QR code image for very small screens */
+            height: auto; /* Maintain aspect ratio */
+        }
+      }
+
+</style>
+
+<script>
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.style.width === '250px') {
+        sidebar.style.width = '0';
+    } else {
+        sidebar.style.width = '250px';
+    }
+}
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo">
+        </div>
+        <div class="name"><b>MiniMakers</b></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="tinkercad.html">Tinkercad</a>
+            <a href="scratch.html">Scratch</a>
+            <a href="gdevelop.html">Gdevelop</a>
+            <a href="">Web Dev</a>
+            <a href="">Photography</a>
+            <a href="">Krita</a>
+            <a href="">Games</a>
+            <a href="">Poems & Stories</a>
+        </div>
+        <div class="burger" onclick="toggleSidebar()">☰</div>
+    </nav>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="tinkercad.html">Tinkercad</a>
+        <a href="scratch.html">Scratch</a>
+        <a href="gdevelop.html">Gdevelop</a>
+    </div>
+<h2>About Minimakers</h2>
+<p>Welcome to MiniMakers! We are a passionate team dedicated to teaching kids technology in a fun and engaging way. Our goal is to prepare children for the future by making learning enjoyable and accessible.</p>
+
+<h2>Our Mission</h2>
+<p>At MiniMakers, our mission is to inspire and educate the next generation of tech-savvy creators. We believe in the power of hands-on learning and strive to make complex technology concepts simple and fun for kids.</p>
+
+<h2>Our Story</h2>
+<p>Founded with a love for creativity and technology, MiniMakers started as a small project to teach kids how to use tools like Tinkercad, Scratch, and Gdevelop. Over time, we've expanded to include web development, photography, and more. Our YouTube channel, MiniMakers, offers tutorials that blend education with entertainment, ensuring that learning is always a joyous experience.</p>
+       
+<div id="qr">
+    <a> 
+        <img src="images/qr code.png" alt="MiniMakers QR Code"> 
+    </a>
+</div>
+
+<footer>
+    <p>&copy; 2024 MiniMakers. All rights reserved.</p>
+</footer> 
+</body>
+</html>
