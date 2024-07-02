@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Tinkercad</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R851E3VFC"></script>
 <script>
@@ -13,20 +14,36 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="images/gdevelop.jpg">
-    <title>Gdevelop</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/tinkercad.png">
+     <a href="#" class="back-to-top">↑ Back to Top</a>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #
+            -+f0f0f0;
             color: #333;
         }
 
-        h1 {
-          text-align:   center; 
-        }
+        .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
 .navbar {
 display: flex;
 justify-content: space-between;
@@ -114,23 +131,49 @@ padding: 10px 20px;
         text-align: center;
     }
 }
-
-.hero {
-    text-align: center;
-    margin-top: 20px;
+ #main-content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #main-content img {
+            max-width: 100px;
+            height: auto;
+        }
+        #main-content h1 {
+            color: #4CAF50;
+        }
+        
+        .video-container {
+    display: none;
+    margin-bottom: 20px;
 }
 
-.hero img {
+.video-container.active {
+    display: block;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    
-    border-radius: 10px;
+    height: 100%;
 }
 
-.hero .caption {
-    font-size: 1.5em;
+.video-container p {
     margin-top: 10px;
+    font-size: 16px;
 }
-
 footer {
     background-color: black;
     color: white;
@@ -150,20 +193,35 @@ footer {
     }
 }
     </script>
+    <script>
+        window.onscroll = function() {
+    let button = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+};
+
+    </script>
 </head>
 <body>
     <header>
-
+        <div class="container">
+            <div id="branding">
+                <img src="">
+            </div>
  <nav class="navbar">
         <div class="logo">
         <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo"></div>
-        <div class="name"><b>MiniMakers</b></div>
-         <div class="menu">
+        <div class="name"><b>Minimakers</b></div>
+        <div class="menu">
             <a href="index.html">Home</a>
             <a href="tinkercad.html">Tinkercad</a>
             <a href="scratch.html">Scratch</a>
             <a href="gdevelop.html">Gdevelop</a>
-            <a href="birding photos.html">Photography</a>
+            <a href="web dev.html">Web Dev</a>
+             <a href="birding photos.html">Photography</a>
             <a href="krita.html">Krita</a>
             <a href="games.html">Games</a>
             <a href="">Poems & Stories</a>
@@ -176,54 +234,152 @@ footer {
         <a href="tinkercad.html">Tinkercad</a>
         <a href="scratch.html">Scratch</a>
         <a href="gdevelop.html">Gdevelop</a>
-        <a href="birding photos.html">Photography</a>
-        <a href="krita.html">Krita</a>
-        <a href="games.html">Games</a>
-        <a href="">Poems & Stories</a>
+        <a href="web dev.html">Web Dev</a>
+         <a href="birding photos.html">Photography</a>
+            <a href="krita.html">Krita</a>
+            <a href="games.html">Games</a>
+            <a href="">Poems & Stories</a>
     </div>
 
-    <h1> <b> Coming Soon </b> </h1>
-   <div class="hero">
-                <img src="images/hero.png" alt="Hero Image" class="hero-image">
-                <p class="caption"><b>Geek is my Middle Name!</b></p>
-            </div>
+  <div class="container" id="main-content">
+        <img src="https://th.bing.com/th/id/R.20343db3a45deaadb29df3be09d66743?rik=RMK%2bKnBXMnKAcQ&riu=http%3a%2f%2fallvectorlogo.com%2fimg%2f2017%2f07%2ftinkercad-logo.png&ehk=a%2figmTHR%2biWlanTu0Dzs4GJFsK6SJT%2bFYaz1CxqJ19s%3d&risl=&pid=ImgRaw&r=0" alt="Scratch Logo">
+        <h1> Game Making using Gdevelop </h1>
+        <p> Welcome to the exciting world of GDevelop! Join us on a fun journey where you’ll transform creative ideas into interactive games. You’ll start by Naming your project and Adding resources, then bring characters to life with behaviors and animations. Along the way, you’ll master setting up scenes, adding sounds, and creating engaging events. Get ready to explore, create, and have fun with GDevelop!</p>
+            
+        
+        
+
+        <h1> Tutorials </h1>
+        
+  
+  <style>
+    .video-container {
+      display: none;
+      margin-bottom: 20px;
+    }
+    .video-container.active {
+      display: block;
+    }
+    .topic-link {
+      font-weight: normal;
+    }
+    .topic-link.active {
+      font-weight: bold;
+    }
+    li {
+      font-weight: normal;
+    }
+    li.active {
+      font-weight: bold;
+    }
+  </style>
+
+ 
+ <label for="topics"><b>Select a topic:</b></label>
+
+<div id="topics">
+  <label><input type="radio" name="topic" value="all" checked>All</label>
+  <label><input type="radio" name="topic" value="naming">Naming</label>
+  <label><input type="radio" name="topic" value="adding_resources_from_asset_store">Adding resources from asset Store</label>
+  <br>
+  <label><input type="radio" name="topic" value="taking_objects_from_text">Taking objects from text</label>
+  <label><input type="radio" name="topic" value="object_from_scratch">object from scratch</label>
+  <label><input type="radio" name="topic" value="putting_behaviors">Putting behaviors</label>
+  <br>
+  <label><input type="radio" name="topic" value="properties_panel">Properties panel</label>
+  <label><input type="radio" name="topic" value="putting_extensions">Putting Extensions</label>
+  <br>
+  <label><input type="radio" name="topic" value="global_and_scene_variable">Global and Scene variable</label>
+  <label><input type="radio" name="topic" value="text_formatting">Text Formatting</label>
+  <label><input type="radio" name="topic" value="events">Events</label>
+  <br>
+  <label><input type="radio" name="topic" value="adding_variables">Adding Variables</label>
+  <label><input type="radio" name="topic" value="creating_characters">Creating Characters</label>
+  <label><input type="radio" name="topic" value="making_animations">Making Animations</label>
+  <br>
+  <label><input type="radio" name="topic" value="uploading_animations">Uploading Animations</label>
+  <label><input type="radio" name="topic" value="workplane">Workplane</label>
+  <br>
+  <label><input type="radio" name="topic" value="setting_camera">Setting Camera</label>
+  <label><input type="radio" name="topic" value="characters_panel">Characters panel</label>
+  <br>
+  <label><input type="radio" name="topic" value="add_sound">Add Sound</label>
+  <label><input type="radio" name="topic" value="zoom_in_and_out">Zoom In & Out</label>
+  <br>
+</div>
+
+
+<div class="video-container" data-topics="view_cube duplicate copy_n_paste delete undo_n_redo">
+      <h3>Tutorial 1</h3>
+      <div class="video-wrapper">
+      <iframe id="Tutorial 1" width="784" height="441" src="https://www.youtube.com/embed/_p6n1pFh1-Q" title="Introduction to Tinkercad for Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>        
+      <ul>
+        <li>View Cube: <a href="#" data-video="Tutorial 1" data-start="35" class="topic-link" data-topic="view_cube">0:35</a></li>
+        <li>Copy and Paste: <a href="#" data-video="Tutorial 1" data-start="100" class="topic-link" data-topic="copy_n_paste">1:40</a></li>
+        <li>Duplicate: <a href="#" data-video="Tutorial 1" data-start="145" class="topic-link" data-topic="duplicate">2:25</a></li>
+        <li>Delete: <a href="#" data-video="Tutorial 1" data-start="205" class="topic-link" data-topic="delete">3:25</a></li>
+        <li>Undo and Redo: <a href="#" data-video="Tutorial 1" data-start="235" class="topic-link" data-topic="undo_n_redo">3:55</a></li>
+    </ul>
+    </div>
+
+   
     <!-- Add more video containers as needed -->
   </div>
 
+  <script>
+    document.querySelectorAll('input[name="topic"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const selectedTopic = this.value;
+        const videoContainers = document.querySelectorAll('.video-container');
+     
+      videoContainers.forEach(container => {
+        const links = container.querySelectorAll('.topic-link');
+          links.forEach(link => {
+            link.classList.remove('active');
+            link.parentElement.classList.remove('active');
+          });
+        if (selectedTopic === 'all') {
+          container.classList.add('active');
 
+        } else {
+          const topics = container.getAttribute('data-topics').split(' ');
+          if (topics.includes(selectedTopic)) {
+            container.classList.add('active');
+            links.forEach(link => {
+              if (link.getAttribute('data-topic') === selectedTopic) {
+                link.classList.add('active');
+                link.parentElement.classList.add('active');
+                  // video timing getting changed
+                  const videoId = link.getAttribute('data-video');
+                  const startTime = link.getAttribute('data-start');
+                  const iframe = document.getElementById(videoId);
+                  const src = iframe.src.split('?')[0];
+                  iframe.src = src+'?start='+startTime;
+              }
+            });
+          } else {
+            container.classList.remove('active');
+          }
+        }
+      });
+    });
+  });   
+
+    document.querySelectorAll('a[data-video]').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        const videoId = this.getAttribute('data-video');
+        const startTime = this.getAttribute('data-start');
+        const iframe = document.getElementById(videoId);
+        const src = iframe.src.split('?')[0]
+        iframe.src =src+'?start='+startTime+'&autoplay=1&mute=1';
+      });
+    });
+
+     // Trigger change event on page load to show all videos by default
+    document.querySelector('input[name="topic"][value="all"]').dispatchEvent(new Event('change'));
   </script>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <footer>
         <p>&copy; 2024 MiniMakers. All rights reserved.</p>
     </footer> 
