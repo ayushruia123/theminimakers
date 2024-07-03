@@ -1,110 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Tinkercad</title>
+<!DOCTYPE html> <html lang="en"> <head> <title>Tinkercad</title>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R851E3VFC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-6R851E3VFC"></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag()
+{dataLayer.push(arguments);} gtag('js', new Date());
 
-  gtag('config', 'G-6R851E3VFC');
-</script>
+  gtag('config', 'G-6R851E3VFC'); </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/tinkercad.png">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: green;
-padding: 10px 20px;
-}
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,
+    initial-scale=1.0"> <link rel="icon" type="image/png" sizes="32x32"
+    href="images/tinkercad.png"> <style> body { font-family: Arial,
+    sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;
+    color: #333; }
+.navbar { display: flex; justify-content: space-between; align-items: center;
+ background-color: green; padding: 10px 20px; }
 
-.navbar .logo {
-    color: white;
-    font-size: 1.5em;
-}
+.navbar .logo { color: white; font-size: 1.5em; }
 
-.navbar .logo img {
-    height: 30px; /* Height of the logo */
-}
+.navbar .logo img { height: 30px; /* Height of the logo */ }
 
-.navbar .name {
-    color: white;
-    font-size: 2em;
-}
+.navbar .name { color: white; font-size: 2em; }
 
-.navbar .menu {
-    display: flex;
-}
+.navbar .menu { display: flex; }
 
-.navbar .menu a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
+.navbar .menu a { color: white; padding: 10px; text-decoration: none; }
 
-.navbar .burger {
-    display: none;
-    font-size: 1.5em;
-    color: white;
-    cursor: pointer;
-}
+.navbar .burger { display: none; font-size: 1.5em; color: white; cursor:
+ pointer; }
 
 /* Sidebar styles */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
+.sidebar { height: 100%; width: 0; position: fixed; top: 0; right: 0;
+ background-color: #111; overflow-x: hidden; transition: 0.5s; padding-top:
+ 60px; }
 
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
+.sidebar a { padding: 10px 15px; text-decoration: none; font-size: 1.2em;
+ color: white; display: block; transition: 0.3s; }
 
-.sidebar a:hover {
-    background-color: #575757;
-}
+.sidebar a:hover { background-color: #575757; }
 
-.sidebar .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 2em;
-}
+.sidebar .closebtn { position: absolute; top: 10px; right: 25px; font-size:
+ 2em; }
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-    .navbar .menu {
-        display: none;
-    }
+    .navbar .menu { display: none; }
 
-    .navbar .burger {
-        display: block;
-    }
-
+    .navbar .burger { display: block; }
     .navbar .name {
         flex-grow: 1;
         text-align: center;
@@ -129,85 +70,37 @@ padding: 10px 20px;
     margin-bottom: 20px;
 }
 
-.video-container.active {
-    display: block;
-}
 
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
+.video-container.active { display: block; }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+.video-wrapper { position: relative; padding-bottom: 56.25%; /* 16:9 aspect
+ ratio */ height: 0; overflow: hidden; max-width: 100%; }
 
-.video-container p {
-    margin-top: 10px;
-    font-size: 16px;
-}
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0.5em;
-    width: 100%;
-    font-size: 0.7em;
-}
-</style>
-<script>
-    function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar.style.width === '250px') {
-        sidebar.style.width = '0';
-    } else {
-        sidebar.style.width = '250px';
-    }
-}
-    </script>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <img src="">
-            </div>
- <nav class="navbar">
-        <div class="logo">
-        <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo"></div>
-        <div class="name"><b>Minimakers</b></div>
-        <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="tinkercad.html">Tinkercad</a>
-            <a href="scratch.html">Scratch</a>
-            <a href="gdevelop.html">Gdevelop</a>
-            <a href="web dev.html">Web Dev</a>
-             <a href="birding photos.html">Photography</a>
-            <a href="krita.html">Krita</a>
-            <a href="games.html">Games</a>
-            <a href="">Poems & Stories</a>
-        </div>
-        <div class="burger" onclick="toggleSidebar()">☰</div>
-    </nav>
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-         <a href="index.html">Home</a>
-        <a href="tinkercad.html">Tinkercad</a>
-        <a href="scratch.html">Scratch</a>
-        <a href="gdevelop.html">Gdevelop</a>
-        <a href="web dev.html">Web Dev</a>
-         <a href="birding photos.html">Photography</a>
-            <a href="krita.html">Krita</a>
-            <a href="games.html">Games</a>
-            <a href="">Poems & Stories</a>
-    </div>
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%;
+ height: 100%; }
+
+.video-container p { margin-top: 10px; font-size: 16px; } footer
+ { background-color: black; color: white; text-align: center; padding: 0.5em;
+ width: 100%; font-size: 0.7em; } </style> <script> function toggleSidebar()
+ { const sidebar = document.getElementById('sidebar'); if
+ (sidebar.style.width === '250px') { sidebar.style.width = '0'; } else
+ { sidebar.style.width = '250px'; } } </script> </head> <body> <header> <div
+ class="container"> <div id="branding"> <img src=""> </div> <nav
+ class="navbar"> <div class="logo"> <img
+ src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj"
+ alt="MiniMakers Logo"></div> <div class="name"><b>Minimakers</b></div> <div
+ class="menu"> <a href="index.html">Home</a> <a
+ href="tinkercad.html">Tinkercad</a> <a href="scratch.html">Scratch</a> <a
+ href="gdevelop.html">Gdevelop</a> <a href="web dev.html">Web Dev</a> <a
+ href="birding photos.html">Photography</a> <a href="krita.html">Krita</a> <a
+ href="games.html">Games</a> <a href="">Poems & Stories</a> </div> <div
+ class="burger" onclick="toggleSidebar()">☰</div> </nav> <div id="sidebar"
+ class="sidebar"> <a href="javascript:void(0)" class="closebtn"
+ onclick="toggleSidebar()">&times;</a> <a href="index.html">Home</a> <a
+ href="tinkercad.html">Tinkercad</a> <a href="scratch.html">Scratch</a> <a
+ href="gdevelop.html">Gdevelop</a> <a href="web dev.html">Web Dev</a> <a
+ href="birding photos.html">Photography</a> <a href="krita.html">Krita</a> <a
+ href="games.html">Games</a> <a href="">Poems & Stories</a> </div>
 
   <div class="container" id="main-content">
         <img src="https://th.bing.com/th/id/R.20343db3a45deaadb29df3be09d66743?rik=RMK%2bKnBXMnKAcQ&riu=http%3a%2f%2fallvectorlogo.com%2fimg%2f2017%2f07%2ftinkercad-logo.png&ehk=a%2figmTHR%2biWlanTu0Dzs4GJFsK6SJT%2bFYaz1CxqJ19s%3d&risl=&pid=ImgRaw&r=0" alt="Scratch Logo">
@@ -223,33 +116,15 @@ footer {
          Tinkercad, where every moment is an adrenaline-fueled quest for boundless
         creativity and endless discovery.</p>
            
-       
-       
-
         <h1> Tutorials </h1>
        
  
   <style>
-    .video-container {
-      display: none;
-      margin-bottom: 20px;
-    }
-    .video-container.active {
-      display: block;
-    }
-    .topic-link {
-      font-weight: normal;
-    }
-    .topic-link.active {
-      font-weight: bold;
-    }
-    li {
-      font-weight: normal;
-    }
-    li.active {
-      font-weight: bold;
-    }
-  </style>
+    .video-container { display: none; margin-bottom: 20px; }
+    .video-container.active { display: block; }
+    .topic-link { font-weight: normal; }
+    .topic-link.active { font-weight: bold; } li { font-weight: normal; }
+     li.active { font-weight: bold; } </style>
 
  
   <label for="topics"><b>Select a topic:</b></label>
@@ -336,83 +211,111 @@ footer {
     </ul>
     </div>
 
-    <div id="videos">
-    <div class="video-container" data-topics=" align mirror group_n_ungroup shape_editor">
-      <h3>Tutorial 2</h3>
-      <div class="video-wrapper">
-      <iframe width="784" height="441" src="https://www.youtube.com/embed/00cWWmhABlI" title="Tinkercad Lesson 2 | Group, Ungroup, Align, Mirror" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>        
-      <ul>
+    <div id="videos"> <div class="video-container" data-topics=" align mirror
+    group_n_ungroup shape_editor"> <h3>Tutorial 2</h3> <div
+    class="video-wrapper"> <iframe width="784" height="441"
+    src="https://www.youtube.com/embed/00cWWmhABlI" title="Tinkercad Lesson 2
+    | Group, Ungroup, Align, Mirror" frameborder="0" allow="accelerometer;
+    autoplay; clipboard-write; encrypted-media; gyroscope;
+    picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe> </div>        <ul>
        
-        <li>Mirror Tool: <a href="#" data-video="Tutorial 2" data-start="720" class="topic-link" data-topic="mirror">12:00</a></li>
-        <li>Shape Editor: <a href="#" data-video="hero_bike" data-start="65" class="topic-link"data-topic=shape_editor>1:05</a></li>
-        <li>:Group and Ungroup <a href="#" data-video="Tutorial 2" data-start="230" class="topic-link" data-topic="group_n_ungroup">3:50</a></li>
-          <li>Align Tool:<a href="#" data-video="Tutorial 2" data-start="395" class="topic-link" data-topic="align">6:35</a></li>
-    </ul>
-    </div>
+        <li>Mirror Tool: <a href="#" data-video="Tutorial 2" data-start="720"
+        class="topic-link" data-topic="mirror">12:00</a></li> <li>Shape
+        Editor: <a href="#" data-video="hero_bike" data-start="65"
+        class="topic-link"data-topic=shape_editor>1:05</a></li> <li>:Group
+        and Ungroup <a href="#" data-video="Tutorial 2" data-start="230"
+        class="topic-link" data-topic="group_n_ungroup">3:50</a></li>
+        <li>Align Tool:<a href="#" data-video="Tutorial 2" data-start="395"
+        class="topic-link" data-topic="align">6:35</a></li> </ul> </div>
 
-    <div id="videos">
-    <div class="video-container" data-topics=" shape_gallery name_tag home_view zoom_in_n_zoom_out">
-      <h3>Tutorial 3</h3>
-      <div class="video-wrapper">
-      <iframe id="Tutorial 3" width="784" height="441" src="https://www.youtube.com/embed/20NsoLIx9uA" title="Tinkercad Lesson 3 | Shape Library, Nametag, Dashboard, Home View" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>        
-      <ul>
-        <li>Shape Gallery: <a href="#" data-video="Tutorial 3" data-start="20" class="topic-link" data-topic="shape_gallery">0:20</a></li>
-           <li>Home View:<a href="#" data-video="Tutorial 3" data-start="310" class="topic-link" data-topic="home_view">5:10</a></li>
-          <li>Zoom In and Zoom Out:<a href="#" data-video="Tutorial 3" data-start="350" class="topic-link" data-topic="zoom_in_n_zoom_out">5:50</a></li>
-           <li>Name Tag:<a href="#" data-video="Tutorial 3" data-start="380" class="topic-link" data-topic="name_tag">6:20</a></li>
-    </ul>
-    </div>
+    <div id="videos"> <div class="video-container" data-topics=" shape_gallery
+    name_tag home_view zoom_in_n_zoom_out"> <h3>Tutorial 3</h3> <div
+    class="video-wrapper"> <iframe id="Tutorial 3" width="784" height="441"
+    src="https://www.youtube.com/embed/20NsoLIx9uA" title="Tinkercad Lesson 3
+    | Shape Library, Nametag, Dashboard, Home View" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe> </div>        <ul> <li>Shape Gallery: <a
+    href="#" data-video="Tutorial 3" data-start="20" class="topic-link"
+    data-topic="shape_gallery">0:20</a></li> <li>Home View:<a href="#"
+    data-video="Tutorial 3" data-start="310" class="topic-link"
+    data-topic="home_view">5:10</a></li> <li>Zoom In and Zoom Out:<a href="#"
+    data-video="Tutorial 3" data-start="350" class="topic-link"
+    data-topic="zoom_in_n_zoom_out">5:50</a></li> <li>Name Tag:<a href="#"
+    data-video="Tutorial 3" data-start="380" class="topic-link"
+    data-topic="name_tag">6:20</a></li> </ul> </div>
 
-  <div id="videos">
-    <div class="video-container" data-topics="expansion rotation duplicate align workplane_tool mirror shape_gallery name_tag group_n_ungroup">
-      <h3>Aeroplane Video</h3>
-      <div class="video-wrapper">
-      <iframe id="aeroplane" width="761" height="428" src="https://www.youtube.com/embed/IOq1_F0SCYA" title="Step-by-Step Guide: Designing a 3D Plane Model with Tinkercad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>        
-      <ul>
-        <li>Expansion: <a href="#" data-video="aeroplane" data-start="90" class="topic-link" data-topic="expansion">1:30</a></li>
-        <li>Rotation: <a href="#" data-video="aeroplane" data-start="70" class="topic-link" data-topic="rotation">1:10</a></li>
-       <li>Duplicate: <a href="#" data-video="aeroplane" data-start="331" class="topic-link" data-topic="duplicate">5:31</a></li>
-        <li>Mirror Tool: <a href="#" data-video="aeroplane" data-start="227" class="topic-link" data-topic="mirror">3:47</a></li>
-        <li>Workplane Tool: <a href="#" data-video="aeroplane" data-start="138" class="topic-link" data-topic="workplane_tool">2:18</a></li>
-        <li>Shape Gallery: <a href="#" data-video="aeroplane" data-start="184" class="topic-link" data-topic="shape_gallery">3:04</a></li>
-        <li>:Group and Ungroup <a href="#" data-video="aeroplane" data-start="346" class="topic-link" data-topic="group_n_ungroup">6:16</a></li>
-          <li>Align Tool:<a href="#" data-video="aeroplane" data-start="53" class="topic-link" data-topic="align">0:53</a></li>
-           <li>Name Tag:<a href="#" data-video="aeroplane" data-start="25" class="topic-link" data-topic="name_tag">0:25</a></li>
-    </ul>
-    </div>
-    <div class="video-container" data-topics="expansion rotation duplicate elevation shifting hide_tool group_n_ungroup">
-      <h3>Monster Truck Video</h3>
-      <div class="video-wrapper">
-      <iframe id="monster_truck" width="784" height="441" src="https://www.youtube.com/embed/dfVcOTWspYQ" title="Rev Up Your Design Skills: 3D Monster Truck Modelling Tutorial." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>        
-      <ul>
-        <li>Expansion: <a href="#" data-video="monster_truck" data-start="46" class="topic-link" data-topic="expansion">0:46</a></li>
-        <li>Rotation: <a href="#" data-video="monster_truck" data-start="198" class="topic-link" data-topic="rotation">3:18</a></li>
-       <li>Duplicate: <a href="#" data-video="monster_truck" data-start="354" class="topic-link" data-topic="duplicate">5:54</a></li>
-        <li>Elevating: <a href="#" data-video="monster_truck" data-start="435" class="topic-link" data-topic="elevation">8:15</a></li>
-        <li>Shifting: <a href="#" data-video="monster_truck" data-start="211" class="topic-link" data-topic="shifting">3:31</a></li>
-        <li>Hide Tool: <a href="#" data-video="monster_truck" data-start="142" class="topic-link" data-topic="hide_tool">2:22</a></li>
-        <li>Group and Ungroup: <a href="#" data-video="monster_truck" data-start="163" class="topic-link" data-topic="group_n_ungroup">2:43</a></li>
-    </ul>
-    </div>
-    <div class="video-container" data-topics="expansion rotation group_n_ungroup shape_editor shape_gallery">
-      <h3>Hero Bike</h3>
-       <div class="video-wrapper">
-      <iframe id="hero_bike" width="784" height="441" src="https://www.youtube.com/embed/6iz8NRlfjYY" title="Crafting the Bike of the Future: 3D Modeling in Tinkercad." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <ul>
-        <li>Expansion: <a href="#" data-video="hero_bike" data-start="52" class="topic-link" data-topic="expansion">0:52</a></li>
-    <li>Shape Gallery: <a href="#" data-video="hero_bike" data-start="61" class="topic-link"data-topic=shape_gallery>1:01</a></li>
-    <li>Shape Editor: <a href="#" data-video="hero_bike" data-start="271" class="topic-link"data-topic=shape_editor>4:31</a></li>
-    <li>Group and Ungroup: <a href="#" data-video="hero_bike" data-start="645" class="topic-link"data-topic="group_n_ungroup">10:45</a></li>
+  <div id="videos"> <div class="video-container" data-topics="expansion
+  rotation duplicate align workplane_tool mirror shape_gallery name_tag
+  group_n_ungroup"> <h3>Aeroplane Video</h3> <div class="video-wrapper">
+  <iframe id="aeroplane" width="761" height="428"
+  src="https://www.youtube.com/embed/IOq1_F0SCYA" title="Step-by-Step Guide:
+  Designing a 3D Plane Model with Tinkercad" frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+  gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>        <ul> <li>Expansion: <a href="#" data-video="aeroplane"
+  data-start="90" class="topic-link" data-topic="expansion">1:30</a></li>
+  <li>Rotation: <a href="#" data-video="aeroplane" data-start="70"
+  class="topic-link" data-topic="rotation">1:10</a></li> <li>Duplicate: <a
+  href="#" data-video="aeroplane" data-start="331" class="topic-link"
+  data-topic="duplicate">5:31</a></li> <li>Mirror Tool: <a href="#"
+  data-video="aeroplane" data-start="227" class="topic-link"
+  data-topic="mirror">3:47</a></li> <li>Workplane Tool: <a href="#"
+  data-video="aeroplane" data-start="138" class="topic-link"
+  data-topic="workplane_tool">2:18</a></li> <li>Shape Gallery: <a href="#"
+  data-video="aeroplane" data-start="184" class="topic-link"
+  data-topic="shape_gallery">3:04</a></li> <li>:Group and Ungroup <a href="#"
+  data-video="aeroplane" data-start="346" class="topic-link"
+  data-topic="group_n_ungroup">6:16</a></li> <li>Align Tool:<a href="#"
+  data-video="aeroplane" data-start="53" class="topic-link"
+  data-topic="align">0:53</a></li> <li>Name Tag:<a href="#"
+  data-video="aeroplane" data-start="25" class="topic-link"
+  data-topic="name_tag">0:25</a></li> </ul> </div> <div
+  class="video-container" data-topics="expansion rotation duplicate elevation
+  shifting hide_tool group_n_ungroup"> <h3>Monster Truck Video</h3> <div
+  class="video-wrapper"> <iframe id="monster_truck" width="784" height="441"
+  src="https://www.youtube.com/embed/dfVcOTWspYQ" title="Rev Up Your Design
+  Skills: 3D Monster Truck Modelling Tutorial." frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+  gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>        <ul> <li>Expansion: <a href="#" data-video="monster_truck"
+  data-start="46" class="topic-link" data-topic="expansion">0:46</a></li>
+  <li>Rotation: <a href="#" data-video="monster_truck" data-start="198"
+  class="topic-link" data-topic="rotation">3:18</a></li> <li>Duplicate: <a
+  href="#" data-video="monster_truck" data-start="354" class="topic-link"
+  data-topic="duplicate">5:54</a></li> <li>Elevating: <a href="#"
+  data-video="monster_truck" data-start="435" class="topic-link"
+  data-topic="elevation">8:15</a></li> <li>Shifting: <a href="#"
+  data-video="monster_truck" data-start="211" class="topic-link"
+  data-topic="shifting">3:31</a></li> <li>Hide Tool: <a href="#"
+  data-video="monster_truck" data-start="142" class="topic-link"
+  data-topic="hide_tool">2:22</a></li> <li>Group and Ungroup: <a href="#"
+  data-video="monster_truck" data-start="163" class="topic-link"
+  data-topic="group_n_ungroup">2:43</a></li> </ul> </div> <div
+  class="video-container" data-topics="expansion rotation group_n_ungroup
+  shape_editor shape_gallery"> <h3>Hero Bike</h3> <div class="video-wrapper">
+  <iframe id="hero_bike" width="784" height="441"
+  src="https://www.youtube.com/embed/6iz8NRlfjYY" title="Crafting the Bike of
+  the Future: 3D Modeling in Tinkercad." frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+  gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div> <ul> <li>Expansion: <a href="#" data-video="hero_bike"
+  data-start="52" class="topic-link" data-topic="expansion">0:52</a></li>
+  <li>Shape Gallery: <a href="#" data-video="hero_bike" data-start="61"
+  class="topic-link"data-topic=shape_gallery>1:01</a></li> <li>Shape Editor:
+  <a href="#" data-video="hero_bike" data-start="271"
+  class="topic-link"data-topic=shape_editor>4:31</a></li> <li>Group and
+  Ungroup: <a href="#" data-video="hero_bike" data-start="645"
+  class="topic-link"data-topic="group_n_ungroup">10:45</a></li>
 
-  <li>Rotation: <a href="#" data-video="hero_bike" data-start="682" class="topic-link"data-topic="rotation">11.22</a></li>
-    </ul>
-    </div>
-
+  <li>Rotation: <a href="#" data-video="hero_bike" data-start="682"
+  class="topic-link"data-topic="rotation">11.22</a></li> </ul> </div>
    
     <div class="video-container" data-topics=" rotation shape_editor group_n_ungroup">
       <h3>Drone Video</h3>
@@ -459,29 +362,22 @@ footer {
     <!-- Add more video containers as needed -->
   </div>
 
-  <script>
-    document.querySelectorAll('input[name="topic"]').forEach(radio => {
-      radio.addEventListener('change', function() {
-        const selectedTopic = this.value;
-        const videoContainers = document.querySelectorAll('.video-container');
+  <script> document.querySelectorAll('input[name="topic"]').forEach(radio =>
+  { radio.addEventListener('change', function() { const selectedTopic =
+  this.value; const videoContainers = document.querySelectorAll
+  ('.video-container');
      
-      videoContainers.forEach(container => {
-        const links = container.querySelectorAll('.topic-link');
-          links.forEach(link => {
-            link.classList.remove('active');
-            link.parentElement.classList.remove('active');
-          });
-        if (selectedTopic === 'all') {
-          container.classList.add('active');
+      videoContainers.forEach(container => { const links =
+      container.querySelectorAll('.topic-link'); links.forEach(link =>
+      { link.classList.remove('active'); link.parentElement.classList.remove
+      ('active'); }); if (selectedTopic === 'all') { container.classList.add
+      ('active');
 
-        } else {
-          const topics = container.getAttribute('data-topics').split(' ');
-          if (topics.includes(selectedTopic)) {
-            container.classList.add('active');
-            links.forEach(link => {
-              if (link.getAttribute('data-topic') === selectedTopic) {
-                link.classList.add('active');
-                link.parentElement.classList.add('active');
+        } else { const topics = container.getAttribute('data-topics').split
+        (' '); if (topics.includes(selectedTopic)) { container.classList.add
+        ('active'); links.forEach(link => { if (link.getAttribute
+        ('data-topic') === selectedTopic) { link.classList.add
+        ('active'); link.parentElement.classList.add('active');
                   // video timing getting changed
                   const videoId = link.getAttribute('data-video');
                   const startTime = link.getAttribute('data-start');
@@ -498,16 +394,12 @@ footer {
     });
   });  
 
-    document.querySelectorAll('a[data-video]').forEach(link => {
-      link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const videoId = this.getAttribute('data-video');
-        const startTime = this.getAttribute('data-start');
-        const iframe = document.getElementById(videoId);
-        const src = iframe.src.split('?')[0]
-        iframe.src =src+'?start='+startTime+'&autoplay=1&mute=1';
-      });
-    });
+    document.querySelectorAll('a[data-video]').forEach(link =>
+    { link.addEventListener('click', function(event) { event.preventDefault
+    (); const videoId = this.getAttribute('data-video'); const startTime =
+    this.getAttribute('data-start'); const iframe = document.getElementById
+    (videoId); const src = iframe.src.split('?')[0] iframe.src
+    =src+'?start='+startTime+'&autoplay=1&mute=1'; }); });
 
      // Trigger change event on page load to show all videos by default
     document.querySelector('input[name="topic"][value="all"]').dispatchEvent(new Event('change'));
@@ -516,5 +408,4 @@ footer {
         <p>&copy; 2024 MiniMakers. All rights reserved.</p>
     </footer>
 
-</body>
-</html>
+</body> </html>
