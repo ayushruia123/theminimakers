@@ -2,223 +2,255 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6R851E3VFC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6R851E3VFC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6R851E3VFC');
+  </script>
 
-  gtag('config', 'G-6R851E3VFC');
-</script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" sizes="32x32" href="images/gdevelop.jpg">
-    <title>Poems and Stories</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        h1 {
-          text-align:   center; 
-        }
-.navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: green;
-padding: 10px 20px;
-}
-
-.navbar .logo {
-    color: white;
-    font-size: 1.5em;
-}
-
-.navbar .logo img {
-    height: 30px; /* Height of the logo */
-}
-
-.navbar .name {
-    color: white;
-    font-size: 2em;
-}
-
-.navbar .menu {
-    display: flex;
-}
-
-.navbar .menu a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-.navbar .burger {
-    display: none;
-    font-size: 1.5em;
-    color: white;
-    cursor: pointer;
-}
-
-/* Sidebar styles */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-.sidebar .closebtn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 2em;
-}
-
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-    .navbar .menu {
-        display: none;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpg" sizes="32x32" href="images/gdevelop.jpg">
+  <title>Poems and Stories</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
     }
 
-    .navbar .burger {
-        display: block;
+    .container {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center; 
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: green;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 1.5em;
+    }
+
+    .navbar .logo img {
+      height: 30px;
     }
 
     .navbar .name {
+      color: white;
+      font-size: 2em;
+    }
+
+    .navbar .menu {
+      display: flex;
+    }
+
+    .navbar .menu a {
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    .navbar .burger {
+      display: none;
+      font-size: 1.5em;
+      color: white;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 2em;
+    }
+
+    @media screen and (max-width: 768px) {
+      .navbar .menu {
+        display: none;
+      }
+
+      .navbar .burger {
+        display: block;
+      }
+
+      .navbar .name {
         flex-grow: 1;
         text-align: center;
+      }
     }
-}
 
-.hero {
-    text-align: center;
-    margin-top: 20px;
-}
+    .hero {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-.hero img {
-    width: 100%;
-    
-    border-radius: 10px;
-}
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.hero .caption {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
+    .hero .caption {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
 
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0.5em;
-    width: 100%;
-    font-size: 0.7em;
-}
-</style>
-<script>
+    .video-container {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .video-container video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .lyrics-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .lyrics-container h2 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+
+    .lyrics-container p {
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 5px 0;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 0.5em;
+      width: 100%;
+      font-size: 0.7em;
+      position: fixed;
+      bottom: 0;
+    }
+  </style>
+  <script>
     function toggleSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    if (sidebar.style.width === '250px') {
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar.style.width === '250px') {
         sidebar.style.width = '0';
-    } else {
+      } else {
         sidebar.style.width = '250px';
+      }
     }
-}
-    </script>
+  </script>
 </head>
 <body>
-    <header>
-
- <nav class="navbar">
-        <div class="logo">
-        <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo"></div>
-        <div class="name"><b>MiniMakers</b></div>
-         <div class="menu">
-            <a href="index.html">Home</a>
-            <a href="tinkercad.html">Tinkercad</a>
-            <a href="scratch.html">Scratch</a>
-            <a href="gdevelop.html">Gdevelop</a>
-            <a href="birding photos.html">Photography</a>
-            <a href="krita.html">Krita</a>
-            <a href="games.html">Games</a>
-            <a href="">Poems & Stories</a>
-        </div>
-        <div class="burger" onclick="toggleSidebar()">☰</div>
-    </nav>
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
-         <a href="index.html">Home</a>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo">
+      </div>
+      <div class="name"><b>MiniMakers</b></div>
+      <div class="menu">
+        <a href="index.html">Home</a>
         <a href="tinkercad.html">Tinkercad</a>
         <a href="scratch.html">Scratch</a>
         <a href="gdevelop.html">Gdevelop</a>
         <a href="birding photos.html">Photography</a>
         <a href="krita.html">Krita</a>
         <a href="games.html">Games</a>
-        <a href="">Poems & Stories</a>
+        <a href="#">Poems & Stories</a>
+      </div>
+      <div class="burger" onclick="toggleSidebar()">☰</div>
+    </nav>
+    <div id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="tinkercad.html">Tinkercad</a>
+      <a href="scratch.html">Scratch</a>
+      <a href="gdevelop.html">Gdevelop</a>
+      <a href="birding photos.html">Photography</a>
+      <a href="krita.html">Krita</a>
+      <a href="games.html">Games</a>
+      <a href="#">Poems & Stories</a>
     </div>
+  </header>
 
-    <h1> Poems </h1>
+  <h1>Poems</h1>
 
-<div class="container">
-        <div class="video-container">
-            <video controls>
-                <source src="videos/your-sloth.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="lyrics-container">
-            <h2>Poem Lyrics</h2>
-            <p>Today we are going to go in Srinagar's flight.</p>
-             <p>Ready to see this beautiful sight.</p>
-               <p>I came in the plane and sat on my seat</p> 
-               <p>ready to fly, ready to eat.<p/> 
-                <p>When the plane came on the runway</p>
-                <p> I did not know what to say.</p>
-                <p> As and when the plane started to fly,</p>
-                  <p> I couldn't believe. Trust me, I don't lie.
-                  <p> I saw down at the world </p>
-                    <p>feeling like a flying bird.</p> 
-                    <p>I love this flight, I love indigo.</p>
-                     <p>Get a chance to see the world below.</p>
-                      <p>It had been three hours.</p>
-                       <p>Where are we going? Kashmir or Mars?</p>
-                        <p>It is taking so long.</p>
-                         <p>Where are we going? Kashmir or Hong Kong?</p>
-                          <p>I was very angry. It is so time taking.</p>
-                           <p>When I called the air hostess she told me we were landing </p>
-        </div>
+  <div class="container">
+    <div class="video-container">
+      <video controls>
+        <source src="videos/sloth.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
+    <div class="lyrics-container">
+      <h2>Poem Lyrics</h2>
+      <p>Today we are going to go in Srinagar's flight.</p>
+      <p>Ready to see this beautiful sight.</p>
+      <p>I came in the plane and sat on my seat</p> 
+      <p>Ready to fly, ready to eat.</p> 
+      <p>When the plane came on the runway</p>
+      <p>I did not know what to say.</p>
+      <p>As and when the plane started to fly,</p>
+      <p>I couldn't believe. Trust me, I don't lie.</p>
+      <p>I saw down at the world</p>
+      <p>Feeling like a flying bird.</p> 
+      <p>I love this flight, I love Indigo.</p>
+      <p>Get a chance to see the world below.</p>
+      <p>It had been three hours.</p>
+      <p>Where are we going? Kashmir or Mars?</p>
+      <p>It is taking so long.</p>
+      <p>Where are we going? Kashmir or Hong Kong?</p>
+      <p>I was very angry. It is so time-taking.</p>
+      <p>When I called the air hostess she told me we were landing.</p>
+    </div>
+  </div>
 
-
-
+  <footer>
+    <p>&copy; 2024 MiniMakers. All rights reserved.</p>
+  </footer> 
 </body>
-
-<footer>
-        <p>&copy; 2024 MiniMakers. All rights reserved.</p>
-    </footer> 
-
 </html>
