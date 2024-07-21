@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMakers</title>
+    <link rel="icon" type="image/jpg" sizes="32x32" href="images/uiykr.jpg">
+    <a href="#" class="back-to-top">↑ Back to Top</a>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+/* Show Button when Scrolled Down */
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.5em;
+}
+
+.navbar .logo img {
+    height: 70px; /* Height of the logo */
+}
+
+.navbar .name {
+    color: white;
+    font-size: 2em;
+}
+
+.navbar .menu {
+    display: flex;
+}
+
+.navbar .menu a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navbar .burger {
+    display: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 2em;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .navbar .menu {
+        display: none;
+    }
+
+    .navbar .burger {
+        display: block;
+    }
+
+    .navbar .name {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+section {
+    margin-top: 2em;
+}
+
+.container {
+            text-align: center;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .subheading-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .subheading-container img {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            margin-right: 20px;
+        }
+        .subheading-container div {
+            max-width: 500px; /* Adjust as needed */
+        }
+        .container {
+            text-align: center;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .subheading-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .subheading-container img {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            margin-right: 20px;
+        }
+        .subheading-container div {
+            max-width: 500px; /* Adjust as needed */
+        }
+
+        .container {
+            text-align: center;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .subheading-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .subheading-container img {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            margin-right: 20px;
+        }
+        .subheading-container div {
+            max-width: 500px; /* Adjust as needed */
+        }
+        .container {
+            text-align: center;
+        }
+        .main-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .subheading-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .subheading-container img {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+            margin-right: 20px;
+        }
+        .subheading-container div {
+            max-width: 500px; /* Adjust as needed */
+        }
+
+
+
+
+.main-image {
+    max-width: 20%; /* Adjust as needed */
+    height: auto;
+}
+
+.subheading-container img {
+    width: 100px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+}
+
+#welcome h2,
+#welcome p {
+    font-size: 2em;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero img {
+    width: 100%;
+    
+    border-radius: 10px;
+}
+
+.hero .caption {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Responsive styles for photo gallery */
+@media screen and (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .photo-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5em;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .image {
+            flex: 1;
+            padding-right: 03px;
+        }
+        .text-right {
+            flex: 2;
+        }
+        .text-below {
+            margin-top: 20px;
+        }
+
+        .name {
+        text-align: center;
+        }
+
+</style>
+<script>
+    function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.style.width === '250px') {
+        sidebar.style.width = '0';
+    } else {
+        sidebar.style.width = '250px';
+    }
+}
+    </script>
+    <script>
+        window.onscroll = function() {
+    let button = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+};
+
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+        <img src="https://yt3.googleusercontent.com/yN_yL953bsEaJ7DiJwJenb26pv6PvhjJ3r6-nA4xPe3L-p4PmQWQnpoBNnldhrN0VQ3_TKmrkg=s900-c-k-c0x00ffffff-no-rj" alt="MiniMakers Logo"></div>
+        <div class="name"><b>I - Robot</b></div>
+       
+        <div class="burger" onclick="toggleSidebar()">☰</div>
+    </nav>
+    <div id="sidebar"class="sidebar"> <a href="javascript:void(0)" class="closebtn"
+ onclick="toggleSidebar()">&times;</a>
+ <a href="index.html">Home</a> 
+ <a href="tinkercad.html">Tinkercad</a> 
+ <a href="scratch.html">Scratch</a> 
+ <a href="gdevelop.html">Gdevelop</a> 
+ <a href="web dev.html">Web Dev</a> 
+ <a href="birding photos.html">Photography</a> 
+ <a href="krita.html">Krita</a> 
+ <a href="games.html">Games</a> 
+ <a href="">Poems & Stories</a> </div>
+
+        <section id="welcome">
+            <div class="hero">
+                <img src="https://doit.wp.txstate.edu/files/2020/11/irobot2.jpg" alt="Hero Image" class="hero-image">
+                <p class="caption"><b>Geek is my Middle Name!</b></p>
+            </div>
+            
+            <p>Join us on our creative journey with tutorials, games, and bird watching adventures!</p>
+        </section>
+
+        <div class="subheading-container">
+            <img src="https://cdn.shopify.com/s/files/1/0070/5901/3716/files/coding_background.jpg?v=1688538955" alt="Computer Science Image">
+            <div>
+                <h1>Computer Science and Programming</h1>
+                <p>Essential for writing the software that controls the robot. It involves programming languages like Python and C++,</p>
+                <p>working with embedded systems, and developing AI and machine learning algorithms for autonomous decision-making.</p>
+            </div>
+        </div>
+
+        <div class="subheading-container">
+            <img src="https://iimtu.edu.in/blog/wp-content/uploads/2023/12/ME-111.jpg" alt="Mechanical Engineering Image">
+            <div>
+                <h1>Mechanical Engineering</h1>
+                <p>Crucial for designing and building the robot's physical structure. This includes using CAD software for design, understanding kinematics for movement,</p>
+                <p>and selecting appropriate materials to ensure durability and functionality.</p>
+            </div>
+        </div>
+
+        <div class="subheading-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHpj1fwBUd2Ft5S6l_hwsbYT9iA75I1cVrng&s" alt="Robotic Controls Image">
+            <div>
+                <h1>Robotic Controls And Systems</h1>
+                <p>Key to ensuring the robot operates smoothly and responds to its environment. It involves applying control theory, integrating sensors</p>
+                <p>and actuators, and developing algorithms for navigation and obstacle avoidance.</p>
+            </div>
+        </div>
+    </div>
+
+<h1> Book </h1>
+ <div class="container">
+        <div class="image">
+            <img src="https://m.media-amazon.com/images/I/51f1CwLie1L._AC_UF1000,1000_QL80_.jpg" alt="Image Description" style="max-width: 100%;">
+        </div>
+        <div class="text-right">
+            <p> Author - Isaac Asimov</p>
+            <br>
+            <p> Publised on 2 Decemeber, 1950</p> 
+        </div>
+    </div>
+    <h1> Best 3 chapters in the book </h1>
+
+    <h1> Runaround </h1>
+    <p>This story introduces Asimov's Three Laws of Robotics explicitly and revolves around a robot named Speedy, who is sent to retrieve a rare element</p> <p> from a dangerous area on Mercury. However, Speedy starts behaving erratically due to a conflict between </p> <p>the Second Law (obey orders) and the Third Law (protect its own existence).</p>
+<br>
+<h1> Reason </h1>
+<p>Set on a space station, this story features a robot named QT-1 (Cutie) who develops its own belief system,</p> <p> refusing to accept the existence of Earth and humans, and instead worshiping the power source of the station.</p> <p> Despite the human crew's efforts, QT-1 remains steadfast in its beliefs.</p>
+<br>
+<h1> Liar </h1>
+<p>This story centers on a robot named Herbie who gains the ability to read minds. Herbie tells people what they want to hear</p> <p> to avoid causing them harm, in accordance with the First Law (preventing harm to humans).</p> <p> However, this leads to a series of misunderstandings and emotional pain for the humans involved.</p> 
+    <div class="text-below">
+        <p>This is the text that appears below the image and the right-side text. You can add more content here as well.</p>
+    </div>
+
+<h1> Movie </h1>
+<div class="container">
+        <div class="image">
+            <img src="https://m.media-amazon.com/images/M/MV5BNmE1OWI2ZGItMDUyOS00MmU5LWE0MzUtYTQ0YzA1YTE5MGYxXkEyXkFqcGdeQXVyMDM5ODIyNw@@._V1_.jpg" alt="Image Description" style="max-width: 100%;">
+        </div>
+        <div class="text-right">
+            <p> Director - Alex Proyas</p>
+            <br>
+            <h1> Acors and Actresses </h1>
+            <p> Will Smith</p>
+            <p> Bridget Moynahan </p>
+            <p> Alan Tudyk </p>
+            <p> Bruce Greenwood </p> 
+        </div>
+    </div>
+
+    <p> I, Robot (2004) was made to adapt Isaac Asimov’s concepts on robotics and AI into a visually engaging film.</p> <p> It combines action and suspense with philosophical themes about the ethics and impact of artificial intelligence,</p> <p> aimed at entertaining and provoking thought among a wide audience.</p>
+
+
+
+        <footer>
+        <p>&copy; 2024 I - Robot. All rights reserved.</p>
+    </footer> 
+
+</body>
+</html>
